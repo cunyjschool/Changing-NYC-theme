@@ -99,6 +99,38 @@ class cngnyc {
 		);
 		register_taxonomy( 'cngnyc_classes', $post_types, $args );
 		
+		// Register the Places taxonomy
+		$args = array(
+			'label' => 'Places',
+			'labels' => array(
+				'name' => 'Places',
+				'singular_name' => 'Place',
+				'search_items' =>  'Search Places',
+				'popular_items' => 'Popular Places',
+				'all_items' => 'All Places',
+				'parent_item' => 'Parent Places',
+				'parent_item_colon' => 'Parent Places:',
+				'edit_item' => 'Edit Place', 
+				'update_item' => 'Update Place',
+				'add_new_item' => 'Add New Place',
+				'new_item_name' => 'New Place',
+				'separate_items_with_commas' => 'Separate places with commas',
+				'add_or_remove_items' => 'Add or remove places',
+				'choose_from_most_used' => 'Choose from the most common places',
+				'menu_name' => 'Places',
+			),
+			'show_tagcloud' => false,
+			'rewrite' => array(
+				'slug' => 'places',
+				'hierarchical' => true,
+			),
+		);
+
+		$post_types = array(
+			'post',
+		);
+		register_taxonomy( 'cngnyc_places', $post_types, $args );
+		
 		// Register the Topics taxonomy
 		$args = array(
 			'label' => 'Topics',
