@@ -163,6 +163,39 @@ class cngnyc {
 		);
 		register_taxonomy( 'cngnyc_topics', $post_types, $args );
 		
+		// Register the Themes taxonomy
+		$args = array(
+			'label' => 'Themes',
+			'labels' => array(
+				'name' => 'Themes',
+				'singular_name' => 'Theme',
+				'search_items' =>  'Search Themes',
+				'popular_items' => 'Popular Themes',
+				'all_items' => 'All Themes',
+				'parent_item' => 'Parent Themes',
+				'parent_item_colon' => 'Parent Themes:',
+				'edit_item' => 'Edit Theme', 
+				'update_item' => 'Update Theme',
+				'add_new_item' => 'Add New Theme',
+				'new_item_name' => 'New Theme',
+				'separate_items_with_commas' => 'Separate themes with commas',
+				'add_or_remove_items' => 'Add or remove themes',
+				'choose_from_most_used' => 'Choose from the most common themes',
+				'menu_name' => 'Themes',
+			),
+			'hierarchical' => true,
+			'show_tagcloud' => false,
+			'rewrite' => array(
+				'slug' => 'themes',
+				'hierarchical' => true,
+			),
+		);
+		
+		$post_types = array(
+			'post',
+		);
+		register_taxonomy( 'cngnyc_Themes', $post_types, $args );
+		
 	} // END create_taxonomies()
 
 	/**
@@ -171,12 +204,9 @@ class cngnyc {
 	function after_setup_theme() {
 		
 		$post_formats = array(
-			'aside',
+			'audio',
 			'gallery',
-			'status',
-			'quote',
 			'image',
-			'link',
 		);
 		add_theme_support( 'post-formats', $post_formats );
 		add_post_type_support( 'post', 'post-formats' );
