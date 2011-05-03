@@ -25,7 +25,14 @@ class cngnyc {
 	 * init()
 	 */
 	function init() {
+		global $wp_taxonomies;
 		
+		if ( taxonomy_exists( 'post_tag' ) ) {
+			unset( $wp_taxonomies['post_tag']);
+		}
+		if ( taxonomy_exists( 'category' ) ) {
+			unset( $wp_taxonomies['category']);
+		}
 		
 	} // END init()
 	
