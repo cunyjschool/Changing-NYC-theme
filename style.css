@@ -8,3 +8,120 @@ Version: 0.0
 License: GNU General Public License
 License URI: license.txt
 */
+
+body, html, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Georgia", "Times", serif;
+	font-size: 12px;
+	line-height: 18px;
+	background-color: #EEEEEE;
+}
+
+.wrap {
+	width: 900px;
+	margin-left: 150px;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float-right
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+h1 {
+	font-size: 36px;
+	line-height: 48px;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 38px;
+}
+
+h3 {
+	
+}
+
+h4 {
+	
+}
+
+p, ul, ol {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.post h2, .post h3 {
+	font-family: "Droid Serif", "Georgia", "Times", serif;
+}
+
+.post .entry {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/**
+ * Property: width
+ */
+body.single .main .wrap {
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 600px;
+}
+
+/**
+ * Page: Single
+ */
+
+body.single .header .wrap {
+	background-color: #EEEEEE;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+body.single .header .wrap h1 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: normal;
+}
+
+body.single .header .wrap h1 a {
+	color: #777777;
+}
+
+body.single .header .wrap .site-description {
+	color: #888888;
+}
+
+/**
+ * Element: sidebar.sidebar-taxonomy
+ */
+.sidebar.sidebar-taxonomy {
+	text-align: right;
+	padding-right: 5px;
+	width: 150px;
+}
+
+.sidebar.sidebar-taxonomy ul {
+	
+}
+
+.sidebar.sidebar-taxonomy ul li {
+	list-style-type: none;
+}

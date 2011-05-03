@@ -7,7 +7,7 @@
 	<meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
 	<meta http-equiv="content-language" content="en" />
 
-	<title><?php wp_title(); ?></title>
+	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 	
 	<?php
 	/**
@@ -19,7 +19,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon" />
 
-  <?php wp_head(); ?>
+	<?php wp_head(); ?>
   
 </head>
 
@@ -28,6 +28,10 @@
 <div class="header">
 	
 	<div class="wrap">
+		
+		<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		
+		<div class="site-description"><?php bloginfo('description'); ?></div>
 	
 	</div><!-- END .wrap -->
 	

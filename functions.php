@@ -43,7 +43,8 @@ class cngnyc {
 	function register_menus() {
 	  register_nav_menus(
 	    array( 
-			'primary-navigation' => __( 'Header Menu' ) 
+			'primary-navigation' => 'Primary Navigation',
+			'sidebar-taxonomy-places' => 'Taxonomy Sidebar: Places'
 		)
 	  );
 	} // END register_menus()
@@ -57,6 +58,7 @@ class cngnyc {
 		
 		if ( !is_admin() ) {
 			wp_enqueue_style( 'cngnyc_primary_css', get_bloginfo('template_directory') . '/style.css', false, CNGNYC_VERSION );
+			wp_enqueue_style( 'custom_font_css', 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic', false, CNGNYC_VERSION );
 		}
 		
 	} // END enqueue_resources()
@@ -222,5 +224,45 @@ class cngnyc {
 
 global $cngnyc;
 $cngnyc = new cngnyc();
+
+/**
+ * cngnyc_get_term_base()
+ */
+function cngnyc_get_term_base( $term_object ) {
+	
+	if ( !is_object( $term_object ) ) {
+		return false;
+	}
+	
+	switch( $term_object->taxonomy ) {
+		case 'cngnyc_classes':
+			return 'classes';
+			break;
+		case 'cngnyc_topics':
+			return 'topics';
+			break;
+		case 'cngnyc_places':
+			return 'places';
+			break;
+		default:
+			return false;
+	}
+	
+} // END cngnyc_get_term_base()
+
+/**
+ * cngnyc_is_post_term()
+ */
+function cngnyc_is_post_term( $term_object, $post_terms = array() ) {
+	
+	if ( !is_object( $term_object ) || empty( $post_terms ) ) {
+		return false;
+	}
+	
+	foreach ( $post_terms as $post_term ) {
+		
+	}
+	
+} // END cngnyc_is_post_term()
 
 ?>
