@@ -196,7 +196,7 @@ class cngnyc {
 		$post_types = array(
 			'post',
 		);
-		register_taxonomy( 'cngnyc_Themes', $post_types, $args );
+		register_taxonomy( 'cngnyc_themes', $post_types, $args );
 		
 	} // END create_taxonomies()
 
@@ -244,6 +244,9 @@ function cngnyc_get_term_base( $term_object ) {
 		case 'cngnyc_places':
 			return 'places';
 			break;
+		case 'cngnyc_themes':
+			return 'themes';
+			break;	
 		default:
 			return false;
 	}
@@ -260,8 +263,12 @@ function cngnyc_is_post_term( $term_object, $post_terms = array() ) {
 	}
 	
 	foreach ( $post_terms as $post_term ) {
-		
-	}
+		if ( $post_term->slug == $term_object->slug && $post_term->taxonomy == $term_object->taxonomy ) {
+			return true;
+		}
+	} // END foreach ( $post_terms as $post_term )	
+	
+	return false;
 	
 } // END cngnyc_is_post_term()
 

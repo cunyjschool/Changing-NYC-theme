@@ -29,9 +29,15 @@
 	
 	<div class="wrap">
 		
+		<?php if ( !is_home() ) : ?>
+		
+		<img class="site-logo float-right" src="<?php bloginfo('template_directory'); ?>/img/censuslogo_75.png" width="146px" height="75px" />
+		
 		<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 		
-		<div class="site-description"><?php bloginfo('description'); ?></div>
+		<?php endif; ?>
+		
+		<div class="clear"></div>
 	
 	</div><!-- END .wrap -->
 	

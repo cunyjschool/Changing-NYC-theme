@@ -2,23 +2,13 @@
 
 <div class="main">
 	
+	<?php get_sidebar('left'); ?>
+	
 	<div class="wrap">
 		
 		<div class="content">
 			
-			<div class="post">
-			
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-				
-					<h2><?php the_title() ?></h2>
-							
-					<div class="entry">
-						<?php the_content(); ?>
-					</div>
-			
-				<?php endwhile ; endif; ?>
-			
-			</div><!-- END .post -->
+			<h1><?php bloginfo('name'); ?></h1>
 
 		</div><!-- END .content -->
 	

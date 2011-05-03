@@ -14,7 +14,7 @@
 				
 					<h2><?php the_title() ?></h2>
 					
-					<div class="meta">By <?php if ( function_exists( 'co_authors' ) ) { co_authors(); } else { the_author(); } ?> <a href="<?php the_permalink(); ?>">&#8734;</a></div>
+					<div class="meta">By <?php if ( function_exists( 'co_authors' ) ) { co_authors(); } else { the_author(); } ?>, <?php the_date(); ?> <a href="<?php the_permalink(); ?>">&#8734;</a></div>
 							
 					<div class="entry">
 						<?php the_content(); ?>
