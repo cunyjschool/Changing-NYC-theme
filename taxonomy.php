@@ -6,7 +6,7 @@
 	
 	<div class="wrap">
 		
-		<?php get_template_part( 'loop', 'index' ); ?>
+		<?php get_template_part( 'loop', 'tax' ); ?>
 	
 		<?php get_sidebar(); ?>
 	

@@ -19,6 +19,7 @@ body {
 	font-size: 12px;
 	line-height: 18px;
 	background-color: #F1F2F2;
+	color: #222222;
 }
 
 .wrap {
@@ -55,6 +56,11 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+a img {
+	border: none;
+	vertical-align: top;
 }
 
 h1 {
@@ -103,6 +109,10 @@ p, ul, ol {
 	width: 900px;	
 }
 
+.header .wrap .site-logo {
+	padding-top: 10px;
+}
+
 .header .wrap h1 {
 	padding-top: 12px;
 }
@@ -133,6 +143,10 @@ p, ul, ol {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 30px;
+}
+
+.main .content a:hover {
+	color: #222222;
 }
 
 .main .post {
