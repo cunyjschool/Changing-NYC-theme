@@ -16,6 +16,8 @@
 	
 	if ( is_single() ) {
 		$post_terms = wp_get_object_terms( $post->ID, $all_taxonomies );
+	} else if ( is_tax() ) {
+		$post_terms = array( get_queried_object() );
 	} else {
 		$post_terms = array();
 	}
