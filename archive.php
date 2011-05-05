@@ -4,11 +4,9 @@
 	
 	<?php get_sidebar('left'); ?>	
 	
-	<div class="wrap">
+	<div class="wrap float-left">
 		
 		<?php get_template_part( 'loop', 'index' ); ?>
-	
-		<?php get_sidebar(); ?>
 	
 		<div class="clear"></div>
 

@@ -4,7 +4,7 @@
 	
 	<?php get_sidebar('left'); ?>
 	
-	<div class="wrap">
+	<div class="wrap float-left">
 		
 		<div class="content">
 			

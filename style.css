@@ -24,7 +24,6 @@ body {
 
 .wrap {
 	width: 900px;
-	margin-left: 200px;
 	margin-right: auto;
 }
 
@@ -107,7 +106,8 @@ p, ul, ol {
 .header .wrap {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	width: 900px;	
+	width: 900px;
+	margin-left: 200px;
 }
 
 .header .wrap .site-logo {
@@ -138,6 +138,9 @@ p, ul, ol {
 /**
  * Section: .main
  */
+.main .wrap {
+	margin-left: 10px;
+}
 
 .main .content {
 	padding-top: 10px;
@@ -179,6 +182,11 @@ p, ul, ol {
 	color: #888888;
 }
 
+.main .post .meta.top-meta {
+	padding-top: 5px;
+	padding-bottom: 3px;
+}
+
 .main .post .meta span {
 	padding-right: 10px;
 }
@@ -191,6 +199,12 @@ p, ul, ol {
 	font-size: 14px;
 	line-height: 20px;
 	font-family: "Georgia", "Times", serif;
+}
+
+.main .post .entry .gallery img {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
 }
 
 /**
@@ -235,7 +249,6 @@ body.home-page .main ul.posts li .meta {
 
 .sidebar.sidebar-taxonomy {
 	text-align: right;
-	padding-right: 5px;
 	width: 190px;
 }
 
