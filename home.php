@@ -7,8 +7,7 @@
 	<div class="wrap">
 		
 		<div class="content">
-			
-			<h1><?php bloginfo('name'); ?></h1>
+
 
 		</div><!-- END .content -->
 	

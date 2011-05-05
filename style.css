@@ -9,7 +9,7 @@ License: GNU General Public License
 License URI: license.txt
 */
 
-body, html, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+body, html, h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote {
 	margin: 0;
 	padding: 0;
 }
@@ -58,21 +58,23 @@ a:hover {
 }
 
 h1 {
-	font-size: 42px;
-	line-height: 48px;
+	font-size: 36px;
+	line-height: 42px;
+	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 h2 {
 	font-size: 30px;
 	line-height: 38px;
+	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 h3 {
-	
+	font-family: "Droid Serif", "Georgia", "Times", serif;
 }
 
 h4 {
-	
+	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 p, ul, ol {
@@ -80,12 +82,82 @@ p, ul, ol {
 	padding-bottom: 5px;
 }
 
-.post h2, .post h3 {
+.message {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #F1F2F2;
+	border: 2px solid #CCCCCC;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/**
+ * Section: .header
+ */
+
+.header .wrap {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 900px;	
+}
+
+.header .wrap h1 {
+	padding-top: 12px;
+}
+
+.header .wrap h1 a {
+	color: #444444;
+	font-weight: 300;
+}
+
+.header .wrap .site-description {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 200px;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.header .wrap .site-description span {
+	font-size: 17px;
+}
+
+/**
+ * Section: .main
+ */
+
+.main .content {
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 30px;
+}
+
+.main .post {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.main .post h2, .main .post h3 {
 	font-family: "Droid Serif", "Georgia", "Times", serif;
 	color: #333333;
 }
 
-.post .entry {
+.main .post .meta {
+	color: #888888;
+}
+
+.main .post .meta span {
+	padding-right: 10px;
+}
+
+.main .post .meta span.author {
+	text-transform: uppercase;
+}
+
+.main .post .entry {
 	font-size: 14px;
 	line-height: 20px;
 	font-family: "Georgia", "Times", serif;
@@ -94,42 +166,15 @@ p, ul, ol {
 /**
  * Property: width
  */
-body.single .main .wrap {
-	width: 630px;
-}
 
-/**
- * Page: Home
- */
-
-body.home-page .main {
-	padding-top: 50px;
-}
-
-/**
- * Page: Single
- */
-
+body.single .main .wrap,
 body.single .header .wrap {
-	padding-top: 10px;
-	padding-bottom: 10px;
 	width: 630px;
 }
 
-body.single .header .wrap h1 {
-	padding-top: 12px;
-}
-
-body.single .header .wrap h1 a {
-	color: #444444;
-	font-weight: 300;
-}
-
-body.single .main .content {
-	padding-top: 10px;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-bottom: 30px;
+body.single .main .post {
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 /**

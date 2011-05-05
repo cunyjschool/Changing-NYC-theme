@@ -29,13 +29,9 @@
 	
 	<div class="wrap">
 		
-		<?php if ( !is_home() ) : ?>
-		
 		<img class="site-logo float-right" src="<?php bloginfo('template_directory'); ?>/img/censuslogo_75.png" width="146px" height="75px" />
 		
-		<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-		
-		<?php endif; ?>
+		<div class="site-description"><span>There are eight million stories in the Naked City</span> &mdash; or 8,175,133, to be more precise, according to recently released U.S. Census Bureau figures. NYCity News Service reporters hit the streets to put faces to the numbers in a series of story packages that offer snapshots of who we are, how we live &mdash; and where. We found the only thing you can count on in the city is change.</div>
 		
 		<div class="clear"></div>
 	
