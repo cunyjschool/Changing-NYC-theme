@@ -89,6 +89,7 @@ class cngnyc {
 				'choose_from_most_used' => 'Choose from the most common classes',
 				'menu_name' => 'Classes',
 			),
+			'hierarchical' => true,
 			'show_tagcloud' => false,
 			'rewrite' => array(
 				'slug' => 'classes',
