@@ -4,7 +4,14 @@
 		$term = get_queried_object();
 		$taxonomy = get_taxonomy( $term->taxonomy );
 	?>
+	
+	<?php if ( !empty( $term->description ) ): ?>
+		<div class="theme-description float-right"><?php echo $term->description; ?></div>
+	<?php endif; ?>
+	
 	<h2><?php echo $term->name; ?></h2>
+	
+	<div class="clear-both"></div>
 	
 <?php if ( have_posts() ) : ?>
 	

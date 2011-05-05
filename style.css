@@ -149,13 +149,20 @@ p, ul, ol {
 	color: #222222;
 }
 
+.main .content .theme-description {
+	padding-top: 2px;
+	width: 400px;
+	font-style: italic;
+	color: #888888;
+	font-family: "Georgia", "Times", serif;	
+}
+
 .main .post {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
 .main .post h2, .main .post h3 {
-	font-family: "Droid Serif", "Georgia", "Times", serif;
 	color: #333333;
 }
 
