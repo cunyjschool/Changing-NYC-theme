@@ -10,7 +10,7 @@
 	
 		<?php get_sidebar(); ?>
 	
-		<div class="clear"></div>
+		<div class="clear-both"></div>
 
 	</div><!-- END .wrap -->
 

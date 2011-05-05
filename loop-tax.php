@@ -11,8 +11,6 @@
 	
 	<h2><?php echo $term->name; ?></h2>
 	
-	<div class="clear-both"></div>
-	
 <?php if ( have_posts() ) : ?>
 	
 <?php while (have_posts()) : the_post(); ?>

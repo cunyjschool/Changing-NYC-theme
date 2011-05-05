@@ -44,7 +44,7 @@ body {
 	float:right;
 }
 
-.clear {
+.clear-both {
 	display:block;
 	clear:both;
 }
@@ -76,6 +76,7 @@ h2 {
 }
 
 h3 {
+	font-size: 22px;
 	font-family: "Droid Serif", "Georgia", "Times", serif;
 }
 
@@ -145,12 +146,8 @@ p, ul, ol {
 	padding-bottom: 30px;
 }
 
-.main .content a:hover {
-	color: #222222;
-}
-
 .main .content .theme-description {
-	padding-top: 2px;
+	padding-top: 3px;
 	width: 400px;
 	font-style: italic;
 	color: #888888;
@@ -162,8 +159,20 @@ p, ul, ol {
 	padding-bottom: 10px;
 }
 
-.main .post h2, .main .post h3 {
-	color: #333333;
+.main .post h2,
+.main .post h2 a,
+.main .post h3,
+.main .post h3 a,
+.main .post h4,
+.main .post h4 a {
+	color: #222222;
+}
+
+.main .post h2 a:hover,
+.main .post h3 a:hover,
+.main .post h4 a:hover {
+	text-decoration: underline;
+	color: #41ad48;
 }
 
 .main .post .meta {
@@ -193,9 +202,31 @@ body.single .header .wrap {
 	width: 630px;
 }
 
-body.single .main .post {
+body.single .main .post,
+body.home-page .main .post {
 	padding-top: 0px;
 	padding-bottom: 0px;
+}
+
+/**
+ * Template: home.php
+ */
+
+body.home-page .main .row {
+	padding-bottom: 20px;
+}
+
+body.home-page .main ul.posts {
+	list-style-type: none;
+}
+
+body.home-page .main ul.posts li {
+	width: 200px;
+	display: inline-block;
+}
+
+body.home-page .main ul.posts li .meta {
+	padding-top: 3px;
 }
 
 /**
