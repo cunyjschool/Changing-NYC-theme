@@ -1,11 +1,5 @@
 <div class="content">
 	
-	<?php
-		$term = get_queried_object();
-		$taxonomy = get_taxonomy( $term->taxonomy );
-	?>
-	<h2><?php echo $term->name; ?></h2>
-	
 <?php if ( have_posts() ) : ?>
 	
 <?php while (have_posts()) : the_post(); ?>
