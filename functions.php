@@ -6,6 +6,10 @@ if ( !class_exists( 'cngnyc' ) ) {
 
 class cngnyc {
 	
+	var $options_group = 'cngnyc_';
+	var $options_group_name = 'cngnyc_options';
+	var $settings_page = 'cngnyc_settings';
+	
 	/**
 	 * __construct()
 	 */
@@ -19,6 +23,8 @@ class cngnyc {
 		add_action( 'init', array( &$this, 'enqueue_resources' ) );
 		add_action( 'init', array( &$this, 'register_menus' ) );
 		
+		add_action( 'admin_init', array( &$this, 'admin_init' ) );
+		
 	} // END __construct()
 	
 	/**
@@ -26,6 +32,10 @@ class cngnyc {
 	 */
 	function init() {
 		global $wp_taxonomies;
+		
+		if ( is_admin() ) {
+			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
+		}		
 		
 		if ( taxonomy_exists( 'post_tag' ) ) {
 			unset( $wp_taxonomies['post_tag']);
@@ -35,6 +45,25 @@ class cngnyc {
 		}
 		
 	} // END init()
+	
+	/**
+	 * admin_init()
+	 */
+	function admin_init() {
+		
+		$this->register_settings();
+		
+	} // END admin_init()
+	
+	/**
+	 * add_admin_menu_items()
+	 * Any admin menu items we need
+	 */
+	function add_admin_menu_items() {
+
+		add_submenu_page( 'themes.php', 'Changing NYC Theme Options', 'Theme Options', 'manage_options', 'cngnyc_options', array( &$this, 'options_page' ) );			
+
+	} // END add_admin_menu_items()
 	
 	/**
 	 * register_menus()
@@ -200,6 +229,59 @@ class cngnyc {
 		register_taxonomy( 'cngnyc_themes', $post_types, $args );
 		
 	} // END create_taxonomies()
+	
+	/**
+	 * register_settings()
+	 */
+	function register_settings() {
+		
+		register_setting( $this->options_group, $this->options_group_name, array( &$this, 'settings_validate' ) );
+
+		// Global options
+		add_settings_section( 'cngnyc_global', 'Global', array(&$this, 'settings_global_section'), $this->settings_page );
+		// Top homepage announcement
+		add_settings_field( 'project_description', 'Project Description', array(&$this, 'settings_project_description_option'), $this->settings_page, 'cngnyc_global' );
+		
+		
+	} // END register_settings()
+	
+	/**
+	 * settings_project_description_option()
+	 */
+	function settings_project_description_option() {
+		
+	} // END settings_project_description_option()
+	
+	/**
+	 * Validation and sanitization on the settings field
+	 */
+	function settings_validate( $input ) {
+
+		return $input;
+
+	}
+	
+	/**
+	 * Options page for the theme
+	 */
+	function options_page() {
+		?>                                   
+		<div class="wrap">
+			<div class="icon32" id="icon-options-general"><br/></div>
+
+			<h2><?php _e('Changing NYC Theme Options', 'cngnyc-theme') ?></h2>
+
+			<form action="options.php" method="post">
+
+				<?php settings_fields( $this->options_group ); ?>
+				<?php do_settings_sections( $this->settings_page ); ?>
+
+				<p class="submit"><input name="submit" type="submit" class="button-primary" value="<?php esc_attr_e('Save Changes'); ?>" /></p>
+
+			</form>
+		</div>
+		<?php
+	}
 
 	/**
 	 * after_setup_theme()
