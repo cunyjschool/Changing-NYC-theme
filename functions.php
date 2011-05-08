@@ -25,6 +25,8 @@ class cngnyc {
 		
 		add_action( 'admin_init', array( &$this, 'admin_init' ) );
 		
+		$this->options = get_option( $this->options_group_name );
+		
 	} // END __construct()
 	
 	/**
@@ -250,16 +252,28 @@ class cngnyc {
 	 */
 	function settings_project_description_option() {
 		
+		$options = $this->options;
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
+
+		echo '<textarea id="project_description" name="' . $this->options_group_name . '[project_description]" cols="80" rows="6">';
+		if ( isset( $options['project_description'] ) && $options['project_description'] ) {
+			echo $options['project_description'];
+		}
+		echo '</textarea>';
+		echo '<p class="description">The following tags are permitted: ' . $allowed_tags . '</p>';
+		
 	} // END settings_project_description_option()
 	
 	/**
+	 * settings_validate()
 	 * Validation and sanitization on the settings field
 	 */
 	function settings_validate( $input ) {
 
+		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );
 		return $input;
 
-	}
+	} // END settings_validate()
 	
 	/**
 	 * Options page for the theme
@@ -354,6 +368,21 @@ function cngnyc_head_title() {
 	echo '<title>' . $title . '</title>';
 	
 } // END cngnyc_head_title()
+
+/**
+ * cngnyc_project_description()
+ * Print the project description
+ */
+function cngnyc_project_description() {
+	global $cngnyc;
+	
+	if ( !empty( $cngnyc->options['project_description'] ) ) {
+		echo $cngnyc->options['project_description'];		
+	} else {
+		echo "Please add a project description in theme options.";
+	}
+	
+} // END cngnyc_project_description()
 
 /**
  * cngnyc_is_post_term()
