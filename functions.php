@@ -2,6 +2,8 @@
 
 define( 'CNGNYC_VERSION', '0.0' );
 
+include_once( 'php/class.cngnyc_event.php' );
+
 if ( !class_exists( 'cngnyc' ) ) {
 
 class cngnyc {
@@ -14,6 +16,8 @@ class cngnyc {
 	 * __construct()
 	 */
 	function __construct() {
+		
+		$this->event = new cngnyc_event();
 		
 		// Add support for post formats and post thumbnails
 		add_action( 'after_setup_theme', array( &$this, 'after_setup_theme' ) );
@@ -100,6 +104,11 @@ class cngnyc {
 	 */
 	function create_taxonomies() {
 		
+		$post_types = array(
+			'post',
+			'cngnyc_event',
+		);
+		
 		// Register the Classes taxonomy
 		$args = array(
 			'label' => 'Classes',
@@ -127,10 +136,6 @@ class cngnyc {
 				'hierarchical' => true,
 			),
 		);
-		
-		$post_types = array(
-			'post',
-		);
 		register_taxonomy( 'cngnyc_classes', $post_types, $args );
 		
 		// Register the Places taxonomy
@@ -153,15 +158,12 @@ class cngnyc {
 				'choose_from_most_used' => 'Choose from the most common places',
 				'menu_name' => 'Places',
 			),
+			'hierarchical' => true,
 			'show_tagcloud' => false,
 			'rewrite' => array(
 				'slug' => 'places',
 				'hierarchical' => true,
 			),
-		);
-
-		$post_types = array(
-			'post',
 		);
 		register_taxonomy( 'cngnyc_places', $post_types, $args );
 		
@@ -191,10 +193,6 @@ class cngnyc {
 				'hierarchical' => true,
 			),
 		);
-		
-		$post_types = array(
-			'post',
-		);
 		register_taxonomy( 'cngnyc_topics', $post_types, $args );
 		
 		// Register the Themes taxonomy
@@ -223,10 +221,6 @@ class cngnyc {
 				'slug' => 'themes',
 				'hierarchical' => true,
 			),
-		);
-		
-		$post_types = array(
-			'post',
 		);
 		register_taxonomy( 'cngnyc_themes', $post_types, $args );
 		

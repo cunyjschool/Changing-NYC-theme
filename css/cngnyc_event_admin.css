@@ -1,0 +1,48 @@
+#cngnyc_events .buttonize:hover {
+	cursor: pointer;
+}
+
+#cngnyc_events .hidden {
+	display: none;
+}
+
+#cngnyc_events h4 {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#cngnyc_events #intro {
+	margin: 10px;
+}
+
+#cngnyc_events .event_date_time .inline {
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+#cngnyc_events .sub {
+	margin-bottom: 10px;
+}
+
+#cngnyc_events .sub a.action {
+	margin-left: 130px;
+}
+
+#cngnyc_events #inner {
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+	background-color: #EEEEEE;
+	border: 1px solid #CCCCCC;
+}
+
+
+#cngnyc_events #intro label {
+	width: 135px;
+	display: inline-block;
+}
+
+#cngnyc_events #time-date label, #cngnyc_events #details label {
+	width: 125px;
+	display: inline-block;
+}
