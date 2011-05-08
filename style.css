@@ -212,9 +212,8 @@ p, ul, ol {
  * Property: width
  */
 
-body.single .main .wrap,
-body.single .header .wrap {
-	width: 630px;
+body.single .main .content {
+	width: 600px;
 }
 
 body.single .main .post,
