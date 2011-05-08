@@ -29,11 +29,15 @@
 	
 	<div class="wrap">
 		
-		<a href="<?php bloginfo('url'); ?>"><img class="site-logo float-right" src="<?php bloginfo('template_directory'); ?>/img/censuslogo_75.png" width="146px" height="75px" /></a>
+		<a href="<?php bloginfo('url'); ?>"><img class="site-logo float-left" src="<?php bloginfo('template_directory'); ?>/img/censuslogo2_75.png" width="130px" height="75px" /></a>
 		
-		<div class="site-description"><span><a href="<?php bloginfo('url'); ?>">There are eight million stories in the Naked City</a></span> &mdash; or 8,175,133, to be more precise, according to recently released U.S. Census Bureau figures. NYCity News Service reporters hit the streets to put faces to the numbers in a series of story packages that offer snapshots of who we are, how we live &mdash; and where. We found the only thing you can count on in the city is change.</div>
+		<div class="site-description"><a href="<?php bloginfo('url'); ?>">There are eight million stories in the Naked City</a> &mdash; or 8,175,133, to be more precise, according to recently released U.S. Census Bureau figures. NYCity News Service reporters hit the streets to put faces to the numbers in a series of story packages that offer snapshots of who we are, how we live &mdash; and where. We found the only thing you can count on in the city is change.</div>
 		
 		<div class="clear-both"></div>
+		
+		<div class="float-right a-project-of">
+			<a href="http://nycitynewsservice.com/">A project of&nbsp;&nbsp;&nbsp;<img class="nycitynewsservice-logo" src="<?php bloginfo('template_directory'); ?>/img/nycitynewsservice_15.png" height="15px" width="102px" /></a>
+		</div>		
 	
 	</div><!-- END .wrap -->
 	

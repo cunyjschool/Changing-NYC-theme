@@ -31,8 +31,11 @@ body {
 .main .wrap {
 	border: 1px solid #CCCCCC;
 	-webkit-border-radius: 5px;
+	-webkit-border-top-right-radius: 0;
 	-moz-border-radius: 5px;
+	-moz-border-radius-topright: 0;
 	border-radius: 5px;
+	border-top-right-radius: 0;
 	background-color: #FFFFFF;		
 }
 
@@ -47,6 +50,11 @@ body {
 .clear-both {
 	display:block;
 	clear:both;
+}
+
+.clear-right {
+	display: block;
+	clear: right;
 }
 
 a {
@@ -106,9 +114,10 @@ p, ul, ol {
 
 .header .wrap {
 	padding-top: 10px;
-	padding-bottom: 10px;
 	width: 900px;
+	padding-bottom: 10px;
 	margin-left: 200px;
+	position:relative;
 }
 
 .header .wrap .site-logo {
@@ -125,15 +134,51 @@ p, ul, ol {
 }
 
 .header .wrap .site-description {
+	padding-bottom: 5px;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	margin-right: 200px;
+	margin-left: 150px;
 	font-size: 13px;
 	line-height: 19px;	
 }
 
-.header .wrap .site-description span {
+.header .wrap .site-description a {
 	font-size: 17px;
+}
+
+.header .wrap .a-project-of {
+	position: absolute;
+	bottom: -1px;
+	right: -2px;
+}
+
+.header .wrap .a-project-of a {
+	display: block;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: #FFFFFF;
+	color: #888888;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;	
+}
+
+.header .wrap .a-project-of a img {
+	top: 1px;
+	position: relative;
+}
+
+.header .wrap .a-project-of a:hover {
+	background-color: #41ad48;
+	color: #FFFFFF;
+	text-decoration: none;
 }
 
 /**

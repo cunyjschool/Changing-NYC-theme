@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+	
 <div class="main">
 	
 	<?php get_sidebar('left'); ?>
