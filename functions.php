@@ -255,6 +255,25 @@ function cngnyc_get_term_base( $term_object ) {
 } // END cngnyc_get_term_base()
 
 /**
+ * cngnyc_head_title()
+ * Generate the <title> tag based on context
+ */
+function cngnyc_head_title() {
+	
+	$title = get_bloginfo('name') . ' | ' . get_bloginfo('description');
+	
+	if ( is_single() ) {
+		global $post;
+		$title = get_the_title( $post->ID );
+	} else if ( is_tax() ) {
+		$title = single_term_title( false, false ) . ' | ' . get_bloginfo('name');
+	}
+	
+	echo '<title>' . $title . '</title>';
+	
+} // END cngnyc_head_title()
+
+/**
  * cngnyc_is_post_term()
  */
 function cngnyc_is_post_term( $term_object, $post_terms = array() ) {

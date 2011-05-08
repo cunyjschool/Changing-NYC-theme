@@ -7,7 +7,7 @@
 	<meta name="copyright" content="Copyright <?php echo date('Y'); ?> City University of New York Graduate School of Journalism" />
 	<meta http-equiv="content-language" content="en" />
 
-	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+	<?php cngnyc_head_title(); ?>
 	
 	<?php
 	/**
