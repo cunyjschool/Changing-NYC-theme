@@ -126,6 +126,11 @@ class cngnyc_event
 	function post_meta_box() {
 		global $post, $cngnyc;
 		
+		$status = get_post_meta($post->ID, '_cngnyc_event_status', true);
+		if ( !$status ) {
+			$status = 'off';
+		}		
+		
 		$all_months = array(
 				'January',
 				'February',
@@ -173,6 +178,19 @@ class cngnyc_event
 		?>
 		
 		<div id="inner">
+			
+			<div id="details"><!-- END #details -->
+
+				<h4>Details</h4>
+				
+				<p><label for="cngnyc_event-status">Has this been covered?</label>
+					<select id="cngnyc_event-status" name="cngnyc_event-status">
+						<option<?php if ( $status == 'off' ) echo ' selected="selected"'; ?> value="off">Not yet</option>
+						<option<?php if ( $status == 'on' ) echo ' selected="selected"'; ?> value="on">Yep</option>
+					</select>
+				</p>
+
+			</div><!-- END #details -->	
 		
 		<div id="time-date">
 		
@@ -222,7 +240,7 @@ class cngnyc_event
 			
 			</div>
 		
-		</div>
+		</div><!-- END #time-date -->
 		
 		</div>
 		
@@ -241,13 +259,21 @@ class cngnyc_event
 		
 		if ( !wp_is_post_revision( $post ) && !wp_is_post_autosave( $post ) ) {
 			
+			$all_day = $_POST['cngnyc_event-status'];
+			if ( $all_day == 'on' ) {
+				$all_day = 'on';
+			} else {
+				$all_day = 'off';
+			}
+			update_post_meta( $post_id, '_cngnyc_event_status', $all_day );			
+			
 			$all_day = $_POST['cngnyc_event-all_day'];
 			if ($all_day) {
 				$all_day = 'on';
 			} else {
 				$all_day = 'off';
 			}
-			update_post_meta($post_id, '_cngnyc_event_all_day', $all_day);
+			update_post_meta( $post_id, '_cngnyc_event_all_day', $all_day );			
 			
 			$default_time = ' 12:00 PM';
 			

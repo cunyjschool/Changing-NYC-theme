@@ -6,7 +6,7 @@
 	
 	<div class="wrap float-left">
 		
-		<?php get_template_part( 'loop', 'tax' ); ?>
+		<?php get_template_part( 'loop', 'tax_live' ); ?>
 		
 		<div class="clear-both"></div>		
 
