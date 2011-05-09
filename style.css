@@ -86,6 +86,7 @@ h2 {
 
 h3 {
 	font-size: 22px;
+	line-height: 28px;
 	padding-top: 5px;
 	padding-bottom: 8px;	
 	font-family: "Droid Serif", "Georgia", "Times", serif;
@@ -113,7 +114,7 @@ p, ul, ol {
 	margin-bottom: 10px;
 }
 
-.theme-description {
+.theme-description, .description {
 	color: #888888;
 	font-style: italic;
 	font-family: "Georgia", "Times", serif;	
@@ -274,22 +275,38 @@ body.home-page .main .post {
  * Template: home.php
  */
 
-body.home-page .main .row {
-	padding-bottom: 20px;
+body.home-page .main .theme-row {
+	padding-bottom: 10px;
 }
 
-body.home-page .main ul.posts {
+body.home-page .main .theme-row ul.posts {
 	list-style-type: none;
 }
 
-body.home-page .main ul.posts li {
+body.home-page .main .theme-row ul.posts li {
 	width: 200px;
 	display: inline-block;
 }
 
-body.home-page .main ul.posts li .meta {
+body.home-page .main .theme-row ul.posts li .meta {
 	padding-top: 3px;
 }
+
+body.home-page .featured-live-event h2 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+body.home-page .main .theme-listing .item {
+	width: 260px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body.home-page .main .theme-listing ul.posts {
+	list-style-type: none;
+}
+
 
 /**
  * Element: sidebar.sidebar-taxonomy
@@ -351,18 +368,11 @@ body.home-page .main ul.posts li .meta {
  */
 .sidebar.live-coverage {
 	padding-top: 10px;
-	width: 300px;
+	width: 265px;
+	padding-right: 5px;
 }
 
 .sidebar.live-coverage .post.live-event {
-	padding-top: 5px;
-	padding-bottom: 5px;
-}
-
-/**
- * Page: home
- */
-body.home-page h2 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }

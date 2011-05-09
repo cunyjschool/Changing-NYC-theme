@@ -57,6 +57,6 @@
 
 	<?php else: endif; ?>
 		
-		<a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $live_term ) . '/' . $live_term->slug . '/'; ?>">See all &rarr;</a>
+		<p><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $live_term ) . '/' . $live_term->slug . '/'; ?>">See all &rarr;</a></p>
 	
 	</div><!-- END .live-coverage -->

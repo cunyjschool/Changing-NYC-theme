@@ -439,6 +439,19 @@ function cngnyc_project_description() {
 } // END cngnyc_project_description()
 
 /**
+ * cngnyc_get_active_event() 
+ * Get the active event if there is one
+ *
+ * @param int $post_id Post ID of the active event
+ */
+function cngnyc_get_active_event() {
+	global $cngnyc;
+	
+	return $cngnyc->options['active_event'];
+	
+} // END cngnyc_get_active_event()
+
+/**
  * cngnyc_is_post_term()
  */
 function cngnyc_is_post_term( $term_object, $post_terms = array() ) {
