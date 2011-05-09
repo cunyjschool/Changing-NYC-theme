@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 0.1
+Version: 0.2
 License: GNU General Public License
 License URI: license.txt
 */
@@ -57,6 +57,11 @@ body {
 	clear: right;
 }
 
+.clear-left {
+	display: block;
+	clear: left;
+}
+
 a {
 	text-decoration: none;
 	color: #41ad48;	
@@ -80,15 +85,21 @@ h1 {
 h2 {
 	font-size: 30px;
 	line-height: 38px;
+	padding-bottom: 10px;
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 h3 {
 	font-size: 22px;
+	line-height: 28px;
+	padding-top: 5px;
+	padding-bottom: 8px;	
 	font-family: "Droid Serif", "Georgia", "Times", serif;
 }
 
 h4 {
+	padding-top: 3px;
+	padding-bottom: 3px;	
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
@@ -106,6 +117,12 @@ p, ul, ol {
 	border: 2px solid #CCCCCC;
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.theme-description, .description {
+	color: #888888;
+	font-style: italic;
+	font-family: "Georgia", "Times", serif;	
 }
 
 /**
@@ -195,14 +212,6 @@ p, ul, ol {
 	padding-bottom: 30px;
 }
 
-.main .content .theme-description {
-	padding-top: 3px;
-	width: 400px;
-	font-style: italic;
-	color: #888888;
-	font-family: "Georgia", "Times", serif;	
-}
-
 .main .post {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -271,22 +280,48 @@ body.home-page .main .post {
  * Template: home.php
  */
 
-body.home-page .main .row {
-	padding-bottom: 20px;
+body.home-page .main .theme-row {
+	padding-bottom: 10px;
 }
 
-body.home-page .main ul.posts {
+body.home-page .main .theme-row ul.posts {
 	list-style-type: none;
 }
 
-body.home-page .main ul.posts li {
-	width: 200px;
-	display: inline-block;
+body.home-page .main .theme-row ul.posts li {
+	width: 190px;
+	padding-right: 10px;
 }
 
-body.home-page .main ul.posts li .meta {
+body.home-page .main .theme-row ul.posts li .meta {
 	padding-top: 3px;
 }
+
+body.home-page .main .theme-row ul.posts li h4 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+body.home-page .main .theme-row .see-all {
+	padding-top: 10px;
+	font-style:italic;
+}
+
+body.home-page .featured-live-event h2 {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+body.home-page .main .theme-listing .item {
+	width: 260px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body.home-page .main .theme-listing ul.posts {
+	list-style-type: none;
+}
+
 
 /**
  * Element: sidebar.sidebar-taxonomy
@@ -341,4 +376,25 @@ body.home-page .main ul.posts li .meta {
 .sidebar.sidebar-primary .sidebar-item {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+/**
+ * Sidebar: live coverage
+ */
+.sidebar.live-coverage {
+	padding-top: 10px;
+	width: 265px;
+	padding-right: 5px;
+}
+
+.sidebar.live-coverage .post.live-event {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/**
+ * Page: Live in the City
+ */
+body.archive.term-live .post.live-event {
+	width: 200px;
 }
