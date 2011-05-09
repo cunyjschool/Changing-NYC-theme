@@ -31,7 +31,7 @@
 
 <?php else: ?>
 	
-	<div class="message info">There aren't any pieces published here yet.</div>
+	<div class="message info">There aren't any pieces published yet. Come back soon and there will be.</div>
 
 <?php endif; ?>			
 
