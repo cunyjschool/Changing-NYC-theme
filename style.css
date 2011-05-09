@@ -80,15 +80,20 @@ h1 {
 h2 {
 	font-size: 30px;
 	line-height: 38px;
+	padding-bottom: 10px;
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 h3 {
 	font-size: 22px;
+	padding-top: 5px;
+	padding-bottom: 8px;	
 	font-family: "Droid Serif", "Georgia", "Times", serif;
 }
 
 h4 {
+	padding-top: 3px;
+	padding-bottom: 3px;	
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
@@ -341,4 +346,11 @@ body.home-page .main ul.posts li .meta {
 .sidebar.sidebar-primary .sidebar-item {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+/**
+ * Page: Live in the City
+ */
+body.archive.term-live .post.live-event {
+	width: 200px;
 }
