@@ -263,6 +263,8 @@ class cngnyc {
 	 * Validation and sanitization on the settings field
 	 */
 	function settings_validate( $input ) {
+		
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 
 		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );
 		return $input;
