@@ -93,7 +93,7 @@ class cngnyc {
 		
 		if ( !is_admin() ) {
 			wp_enqueue_style( 'cngnyc_primary_css', get_bloginfo('template_directory') . '/style.css', false, CNGNYC_VERSION );
-			wp_enqueue_style( 'custom_font_css', 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic', false, CNGNYC_VERSION );
+			wp_enqueue_style( 'custom_font_css', 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic', false );
 		}
 		
 	} // END enqueue_resources()
@@ -224,6 +224,35 @@ class cngnyc {
 		);
 		register_taxonomy( 'cngnyc_themes', $post_types, $args );
 		
+		// Register the Media taxonomy
+		$args = array(
+			'label' => 'Media',
+			'labels' => array(
+				'name' => 'Media',
+				'singular_name' => 'Media',
+				'search_items' =>  'Search Media',
+				'popular_items' => 'Popular Media',
+				'all_items' => 'All Media',
+				'parent_item' => 'Parent Media',
+				'parent_item_colon' => 'Parent Media:',
+				'edit_item' => 'Edit Media', 
+				'update_item' => 'Update Media',
+				'add_new_item' => 'Add New Media',
+				'new_item_name' => 'New Media',
+				'separate_items_with_commas' => 'Separate media with commas',
+				'add_or_remove_items' => 'Add or remove media',
+				'choose_from_most_used' => 'Choose from the most common media',
+				'menu_name' => 'Media',
+			),
+			'hierarchical' => true,
+			'show_tagcloud' => false,
+			'rewrite' => array(
+				'slug' => 'media',
+				'hierarchical' => true,
+			),
+		);
+		register_taxonomy( 'cngnyc_media', $post_types, $args );		
+		
 	} // END create_taxonomies()
 	
 	/**
@@ -235,8 +264,8 @@ class cngnyc {
 
 		// Global options
 		add_settings_section( 'cngnyc_global', 'Global', array(&$this, 'settings_global_section'), $this->settings_page );
-		// Top homepage announcement
 		add_settings_field( 'project_description', 'Project Description', array(&$this, 'settings_project_description_option'), $this->settings_page, 'cngnyc_global' );
+		add_settings_field( 'active_event', 'Active Live Coverage', array(&$this, 'settings_active_event_option'), $this->settings_page, 'cngnyc_global' );
 		
 		
 	} // END register_settings()
@@ -259,10 +288,41 @@ class cngnyc {
 	} // END settings_project_description_option()
 	
 	/**
+	 * settings_active_event_option()
+	 * Choose whether there's currently an active event
+	 */
+	function settings_active_event_option() {
+		
+		$options = $this->options;
+		$args = array(
+			'posts_per_page' => '-1',
+			'post_type' => 'cngnyc_event',
+		);
+		$all_events = new WP_Query( $args );
+		echo '<select id="active_event" name="' . $this->options_group_name . '[active_event]">';
+		echo '<option value="0">-- No active event --</option>';
+		if ( $all_events->have_posts() ) {
+			while ( $all_events->have_posts() ) {
+				$all_events->the_post();
+				echo '<option value="' . get_the_id() . '"';
+				if ( get_the_id() == $options['active_event'] ) {
+					echo ' selected="selected"';
+				}
+				echo '>' . get_the_title() . '</option>';
+			}
+		}
+		echo '</select>';
+		echo '<p class="description">Making an event active will add the event to the homepage and an alert message elsewhere</p>';
+		
+	} // END settings_active_event_option()
+	
+	/**
 	 * settings_validate()
 	 * Validation and sanitization on the settings field
 	 */
 	function settings_validate( $input ) {
+		
+		$allowed_tags = htmlentities( '<b><strong><em><i><span><a><br>' );
 
 		$input['top_announcement'] = strip_tags( $input['top_announcement'], $allowed_tags );
 		return $input;

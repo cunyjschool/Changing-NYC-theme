@@ -330,3 +330,15 @@ body.home-page .main ul.posts li .meta {
 	color: #FFFFFF;
 	background-color: #999999;
 }
+
+.sidebar.sidebar-taxonomy ul li.share-twitter iframe {
+	margin-right: -8px;
+}
+
+/**
+ * Element: .sidebar.sidebar-primary 
+ */
+.sidebar.sidebar-primary .sidebar-item {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
