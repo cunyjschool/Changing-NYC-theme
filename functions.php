@@ -93,7 +93,7 @@ class cngnyc {
 		
 		if ( !is_admin() ) {
 			wp_enqueue_style( 'cngnyc_primary_css', get_bloginfo('template_directory') . '/style.css', false, CNGNYC_VERSION );
-			wp_enqueue_style( 'custom_font_css', 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic', false, CNGNYC_VERSION );
+			wp_enqueue_style( 'custom_font_css', 'http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic', false );
 		}
 		
 	} // END enqueue_resources()

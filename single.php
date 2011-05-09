@@ -6,6 +6,8 @@
 	
 	<div class="wrap float-left">
 		
+		<?php get_sidebar(); ?>
+		
 		<?php get_template_part( 'loop', 'single' ); ?>
 	
 		<div class="clear-both"></div>

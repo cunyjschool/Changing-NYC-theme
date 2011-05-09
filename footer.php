@@ -10,5 +10,7 @@
 
 <?php wp_footer(); ?>
 
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
 </body>
 </html>
