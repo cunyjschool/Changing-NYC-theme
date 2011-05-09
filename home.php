@@ -6,6 +6,8 @@
 	
 	<div class="wrap float-left">
 		
+		<?php get_sidebar('live'); ?>
+		
 		<div class="content">
 			
 		<?php 
@@ -18,13 +20,15 @@
 		
 		<?php foreach ( $theme_terms as $single_term ) : ?>
 			
+			<?php if ( $single_term->slug == 'live') continue; ?>
+			
 			<div class="row">
 			
-			<?php if ( !empty( $single_term->description ) ): ?>
-				<div class="theme-description float-right"><?php echo $single_term->description; ?> <a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
-			<?php endif; ?>
-			
 			<h2><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>"><?php echo $single_term->name; ?></a></h2>
+			
+			<?php if ( !empty( $single_term->description ) ): ?>
+				<div class="theme-description"><?php echo $single_term->description; ?>&nbsp;&nbsp;&nbsp;<a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+			<?php endif; ?>
 			
 			<?php
 				$args = array(

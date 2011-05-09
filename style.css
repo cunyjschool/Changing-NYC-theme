@@ -113,6 +113,12 @@ p, ul, ol {
 	margin-bottom: 10px;
 }
 
+.theme-description {
+	color: #888888;
+	font-style: italic;
+	font-family: "Georgia", "Times", serif;	
+}
+
 /**
  * Section: .header
  */
@@ -198,14 +204,6 @@ p, ul, ol {
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-bottom: 30px;
-}
-
-.main .content .theme-description {
-	padding-top: 3px;
-	width: 400px;
-	font-style: italic;
-	color: #888888;
-	font-family: "Georgia", "Times", serif;	
 }
 
 .main .post {
@@ -344,6 +342,27 @@ body.home-page .main ul.posts li .meta {
  * Element: .sidebar.sidebar-primary 
  */
 .sidebar.sidebar-primary .sidebar-item {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/**
+ * Sidebar: live coverage
+ */
+.sidebar.live-coverage {
+	padding-top: 10px;
+	width: 300px;
+}
+
+.sidebar.live-coverage .post.live-event {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/**
+ * Page: home
+ */
+body.home-page h2 {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }

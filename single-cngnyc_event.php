@@ -6,6 +6,8 @@
 	
 	<div class="wrap float-left">
 		
+		<?php get_sidebar('live'); ?>
+		
 		<?php get_template_part( 'loop', 'single_event' ); ?>
 	
 		<div class="clear-both"></div>
