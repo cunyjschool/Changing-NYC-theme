@@ -235,8 +235,8 @@ class cngnyc {
 
 		// Global options
 		add_settings_section( 'cngnyc_global', 'Global', array(&$this, 'settings_global_section'), $this->settings_page );
-		// Top homepage announcement
 		add_settings_field( 'project_description', 'Project Description', array(&$this, 'settings_project_description_option'), $this->settings_page, 'cngnyc_global' );
+		add_settings_field( 'active_event', 'Active Live Coverage', array(&$this, 'settings_active_event_option'), $this->settings_page, 'cngnyc_global' );
 		
 		
 	} // END register_settings()
@@ -257,6 +257,35 @@ class cngnyc {
 		echo '<p class="description">The following tags are permitted: ' . $allowed_tags . '</p>';
 		
 	} // END settings_project_description_option()
+	
+	/**
+	 * settings_active_event_option()
+	 * Choose whether there's currently an active event
+	 */
+	function settings_active_event_option() {
+		
+		$options = $this->options;
+		$args = array(
+			'posts_per_page' => '-1',
+			'post_type' => 'cngnyc_event',
+		);
+		$all_events = new WP_Query( $args );
+		echo '<select id="active_event" name="' . $this->options_group_name . '[active_event]">';
+		echo '<option value="0">-- No active event --</option>';
+		if ( $all_events->have_posts() ) {
+			while ( $all_events->have_posts() ) {
+				$all_events->the_post();
+				echo '<option value="' . get_the_id() . '"';
+				if ( get_the_id() == $options['active_event'] ) {
+					echo ' selected="selected"';
+				}
+				echo '>' . get_the_title() . '</option>';
+			}
+		}
+		echo '</select>';
+		echo '<p class="description">Making an event active will add the event to the homepage and an alert message elsewhere</p>';
+		
+	} // END settings_active_event_option()
 	
 	/**
 	 * settings_validate()
