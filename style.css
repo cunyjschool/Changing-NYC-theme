@@ -57,6 +57,11 @@ body {
 	clear: right;
 }
 
+.clear-left {
+	display: block;
+	clear: left;
+}
+
 a {
 	text-decoration: none;
 	color: #41ad48;	
@@ -284,12 +289,22 @@ body.home-page .main .theme-row ul.posts {
 }
 
 body.home-page .main .theme-row ul.posts li {
-	width: 200px;
-	display: inline-block;
+	width: 190px;
+	padding-right: 10px;
 }
 
 body.home-page .main .theme-row ul.posts li .meta {
 	padding-top: 3px;
+}
+
+body.home-page .main .theme-row ul.posts li h4 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+body.home-page .main .theme-row .see-all {
+	padding-top: 10px;
+	font-style:italic;
 }
 
 body.home-page .featured-live-event h2 {

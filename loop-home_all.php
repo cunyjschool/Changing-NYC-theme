@@ -13,11 +13,13 @@
 	<?php if ( $single_term->slug == 'live') continue; ?>
 	
 	<div class="theme-row">
+		
+	<div class="theme-information">
 	
-	<h2><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>"><?php echo $single_term->name; ?></a></h2>
+	<h3><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>"><?php echo $single_term->name; ?></a></h3>
 	
 	<?php if ( !empty( $single_term->description ) ): ?>
-		<div class="theme-description"><?php echo $single_term->description; ?>&nbsp;&nbsp;&nbsp;<a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+		<div class="description"><?php echo $single_term->description; ?></div>
 	<?php endif; ?>
 	
 	<?php
@@ -29,18 +31,20 @@
 					'terms' => $single_term->slug,
 				)
 			),
-			'showposts' => 5,
+			'showposts' => 3,
 		);
 		$theme_posts = new WP_Query( $args );
 	?>
 	
-	<?php if ( $theme_posts->have_posts() ) : ?>
+	</div><!-- END .theme-information -->
+	
+	<?php if ( $theme_posts->have_posts() && $theme_posts->post_count >= 3 ) : ?>
 		
 	<ul class="posts">	
 
 	<?php while ( $theme_posts->have_posts()) : $theme_posts->the_post(); ?>
 
-		<li class="post">				
+		<li class="post float-left">				
 
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h4>
 
@@ -52,13 +56,16 @@
 	
 	</ul>
 
-	<?php else: ?>
+	<div class="clear-left"></div>
 
-		<div class="message info">There aren't any pieces published here yet.</div>
+	<?php else: ?>
 
 	<?php endif; ?>
 	
+	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+	
 	</div><!-- END .row -->
+
 	
 <?php endforeach; ?>
 
