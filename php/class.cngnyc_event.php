@@ -93,6 +93,7 @@ class cngnyc_event
 					'cngnyc_places',
 					'cngnyc_themes',
 					'cngnyc_classes',
+					'cngnyc_media',
 				)
 		    )
 		); // END register_post_type()
