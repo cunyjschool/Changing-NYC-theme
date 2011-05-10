@@ -105,9 +105,29 @@ h4 {
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+	color: #222222;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+	color: #41ad48;
+	text-decoration: underline;
+}
+
 p, ul, ol {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+ul li {
+	list-style-type: square;
 }
 
 .message {
@@ -221,22 +241,6 @@ p, ul, ol {
 .main .post {
 	padding-top: 10px;
 	padding-bottom: 10px;
-}
-
-.main .post h2,
-.main .post h2 a,
-.main .post h3,
-.main .post h3 a,
-.main .post h4,
-.main .post h4 a {
-	color: #222222;
-}
-
-.main .post h2 a:hover,
-.main .post h3 a:hover,
-.main .post h4 a:hover {
-	text-decoration: underline;
-	color: #41ad48;
 }
 
 .main .post .post-meta {
@@ -409,26 +413,41 @@ body.archive .theme-description {
 	padding-top: 10px;
 }
 
-body.archive .post-meta.float-right {
+.post-meta,
+.sidebar.post-secondary {
 	width: 250px;
 	padding-top: 5px;
 }
 
-body.archive .post-meta.float-right ul {
+body.single .post-meta {
+	padding-top: 10px;
+}
+
+.post-meta ul {
 	list-style-type: none;
 }
 
-body.archive .post-meta.float-right ul li {
+.post-meta ul li {
 	padding-bottom: 3px;
 	text-transform: uppercase;
 	color: #444444;
+	list-style-type: none;
 }
 
-body.archive .post-meta.float-right ul li span {
+.post-meta ul li span {
 	text-transform: none;
 	color: #888888;
 }
 
+.sidebar .related-posts {
+	
+}
+
+.sidebar .related-posts ul li {
+	margin-left: 15px;
+	margin-right: 15px;
+	color: #888888;
+}
 
 /**
  * Element: sidebar.sidebar-taxonomy

@@ -6,7 +6,7 @@
 	
 	<div class="wrap float-left">
 		
-		<?php get_sidebar(); ?>
+		<?php get_sidebar('single'); ?>
 		
 		<?php get_template_part( 'loop', 'single' ); ?>
 	
