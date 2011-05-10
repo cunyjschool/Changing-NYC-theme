@@ -11,6 +11,22 @@
 	
 	<h2><?php echo $term->name; ?></h2>
 	
+	<?php
+		$args = array(
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'cngnyc_themes',
+					'field' => 'slug',
+					'terms' => $single_term->slug,
+				)
+			),
+			'posts_per_page' => -1,
+			'orderby' => 'title',
+			'order' => 'asc',
+		);
+		$theme_posts = new WP_Query( $args );
+	?>
+	
 <?php if ( have_posts() ) : ?>
 	
 <?php while (have_posts()) : the_post(); ?>
