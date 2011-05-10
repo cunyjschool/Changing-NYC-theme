@@ -44,7 +44,9 @@
 	<div class="event-description"><p><?php echo $post->post_excerpt; ?></p></div>
 	<?php endif; ?>
 
-	<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>
+	<?php $term_list = get_the_term_list( get_the_id(), 'cngnyc_media', false, ', ' ); ?>
+	<?php if ( !empty( $term_list ) ) { $text = 'Media includes <span class="media">' . $term_list . '</span>'; } else { $text = ''; } ?>
+	<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span><?php echo $text; ?></div>
 	
 	</div><!-- END .post -->
 	
