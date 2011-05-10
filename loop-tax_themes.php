@@ -21,6 +21,9 @@
 			<ul>
 			<li class="author"><span class="label">By</span> <?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></li>
 			<li class="timestamp"><span class="label">Published</span> <?php the_time( 'F j, Y' ); ?></li>
+			<?php if ( $topics = get_the_term_list( $post->ID, 'cngnyc_topics', '', ', ', '' ) ) : ?>
+			<li class="topics"><span class="label">Topics</span> <?php echo $topics; ?></li>
+			<?php endif; ?>
 			<?php if ( $media = get_the_term_list( $post->ID, 'cngnyc_media', '', ', ', '' ) ) : ?>
 			<li class="media"><span class="label">Media</span> <?php echo $media; ?></li>
 			<?php endif; ?>
@@ -37,6 +40,8 @@
 	</div><!-- END .primary-content -->
 	
 	</div><!-- END .post -->
+	
+	<div class="clear-right"></div>
 	
 <?php endwhile; ?>
 

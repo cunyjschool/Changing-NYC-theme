@@ -419,7 +419,7 @@ body.archive .post-meta.float-right ul {
 }
 
 body.archive .post-meta.float-right ul li {
-	padding-bottom: 5px;
+	padding-bottom: 3px;
 	text-transform: uppercase;
 	color: #444444;
 }
