@@ -14,7 +14,7 @@
 		<div class="event-description"><p><?php echo $post->post_excerpt; ?></p></div>
 		<?php endif; ?>
 		
-		<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span></div>
+		<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>
 		
 		<?php if ( !empty( $post->post_content ) ) : ?>
 		<div class="entry">

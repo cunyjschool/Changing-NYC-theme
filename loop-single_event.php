@@ -14,7 +14,7 @@
 		$start_date_timestamp = get_post_meta($post->ID, '_cngnyc_event_start_date', true);
 		$start_date = date_i18n('F j', $start_date_timestamp );
 	?>
-	<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span></div>
+	<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>
 	
 	<?php if ( !empty( $post->post_content ) ) : ?>
 	<div class="entry">
