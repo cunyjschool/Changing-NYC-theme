@@ -39,6 +39,7 @@ body {
 	background-color: #FFFFFF;
 	box-shadow: 3px 3px 5px #999999;
 	min-height: 400px;
+	padding-bottom: 10px;
 }
 
 .float-left {
@@ -368,12 +369,13 @@ body.home-page .main .theme-row .inner .theme-description {
 }
 
 body.home-page .main .theme-row ul.posts {
-	list-style-type: none;
+
 }
 
 body.home-page .main .theme-row ul.posts li {
 	width: 175px;
 	padding-right: 10px;
+	list-style-type: none;	
 }
 
 body.home-page .main .theme-row ul.posts li .meta {
@@ -402,7 +404,12 @@ body.home-page .main .theme-listing .item {
 }
 
 body.home-page .main .theme-listing ul.posts {
-	list-style-type: none;
+
+}
+
+body.home-page .main .theme-listing ul.posts li {
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 /**
@@ -509,13 +516,25 @@ body.single .post-meta {
  */
 .sidebar.live-coverage {
 	padding-top: 10px;
-	width: 265px;
-	padding-right: 5px;
+	width: 260px;
+	padding-right: 10px;
+}
+
+.sidebar.live-coverage .theme-description {
+	padding-bottom: 5px;
+}
+
+.sidebar.live-coverage .event-date {
+	color: #888888;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 40px;
 }
 
 .sidebar.live-coverage .post.live-event {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	margin-left: 50px;
+	padding-top: 2px;
+	padding-bottom: 3px;
 }
 
 /**
