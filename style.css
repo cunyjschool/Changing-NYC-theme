@@ -239,7 +239,7 @@ p, ul, ol {
 	color: #41ad48;
 }
 
-.main .post .meta {
+.main .post .post-meta {
 	color: #888888;
 }
 
@@ -271,6 +271,18 @@ p, ul, ol {
 /**
  * Property: width
  */
+
+.w600 {
+	width: 600px;
+}
+
+.w280 {
+	width: 280px;
+}
+
+.w260 {
+	width: 280px;
+}
 
 body.single .main .content {
 	width: 600px;
@@ -387,6 +399,34 @@ body.home-page .main .theme-listing .item {
 
 body.home-page .main .theme-listing ul.posts {
 	list-style-type: none;
+}
+
+/**
+ * loop-tax_themes.php
+ */
+
+body.archive .theme-description {
+	padding-top: 10px;
+}
+
+body.archive .post-meta.float-right {
+	width: 250px;
+	padding-top: 5px;
+}
+
+body.archive .post-meta.float-right ul {
+	list-style-type: none;
+}
+
+body.archive .post-meta.float-right ul li {
+	padding-bottom: 5px;
+	text-transform: uppercase;
+	color: #444444;
+}
+
+body.archive .post-meta.float-right ul li span {
+	text-transform: none;
+	color: #888888;
 }
 
 
