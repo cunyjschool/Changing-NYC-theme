@@ -4,18 +4,25 @@
 	<?php 
 		$post_id = cngnyc_get_active_event();
 		$post = get_post( $post_id );
+		
+		$start_date_timestamp = get_post_meta($post->ID, '_cngnyc_event_start_date', true);
+		$start_date = date_i18n('F j', $start_date_timestamp );	
 	?>
 		<h2>Live now: <?php echo $post->post_title; ?></h2>
 		
 		<?php if ( !empty( $post->post_excerpt ) ): ?>
-		<div class="description"><p><?php echo $post->post_excerpt; ?></p></div>
+		<div class="event-description"><p><?php echo $post->post_excerpt; ?></p></div>
 		<?php endif; ?>
 		
-		<div class="meta top-meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span> <span class="permalink"><a href="<?php the_permalink(); ?>">&#8734;</a></span></div>
+		<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span></div>
 		
+		<?php if ( !empty( $post->post_content ) ) : ?>
 		<div class="entry">
 			<?php echo $post->post_content; ?>
 		</div>
+		<?php else: ?>
+			<div class="message info">Come back on <?php echo $start_date; ?> for coverage of the event</div>
+		<?php endif; ?>
 
 	</div><!-- END .featured-live-event -->
 
@@ -72,7 +79,7 @@
 
 	<?php else: endif; ?>
 		
-	<p><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></p>
+	<p class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></p>
 	
 	</div><!-- END .row -->
 	

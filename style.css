@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 0.3
+Version: 0.4
 License: GNU General Public License
 License URI: license.txt
 */
@@ -21,7 +21,7 @@ body {
 	background-color: #F1F2F2;
 	color: #222222;
 	min-width: 1150px;
-	background-image: url(img/tiles/multitheme15_h450.png);
+	background-image: url(img/tiles/multitheme15_h450.jpg);
 }
 
 .wrap {
@@ -89,7 +89,6 @@ h1 {
 h2 {
 	font-size: 30px;
 	line-height: 38px;
-	padding-bottom: 10px;
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
@@ -147,6 +146,13 @@ ul li {
 	color: #888888;
 	font-style: italic;
 	font-family: "Georgia", "Times", serif;	
+}
+
+.event-description {
+	color: #666666;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.1px;
 }
 
 .see-all {
@@ -221,7 +227,7 @@ ul li {
 }
 
 .header .wrap .a-project-of a:hover {
-	background-color: #CCCCCC;
+	background-color: #41ad48;
 	color: #FFFFFF;
 	text-decoration: none;
 }
@@ -252,6 +258,11 @@ ul li {
 .main .post .meta.top-meta {
 	padding-top: 5px;
 	padding-bottom: 3px;
+	color: #888888;
+}
+
+.main .post .meta {
+	color: #888888;
 }
 
 .main .post .meta span {
@@ -305,6 +316,10 @@ body.home-page .main .post {
  * Template: home.php
  */
 
+body.home-page .featured-live-event {
+	width: 600px;
+}
+
 body.home-page .main .theme-row {
 	padding-bottom: 10px;
 	width: 600px;
@@ -349,11 +364,6 @@ body.home-page .main .theme-row ul.posts li h4 {
 body.home-page .main .theme-row .see-all {
 	padding-top: 10px;
 	font-style:italic;
-}
-
-body.home-page .featured-live-event h2 {
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 body.home-page .main .theme-listing .item {

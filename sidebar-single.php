@@ -47,7 +47,7 @@
 
 </ul>
 
-<p><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $terms[0] ) . '/' . $terms[0]->slug . '/'; ?>">See all &rarr;</a></p>
+<p class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $terms[0] ) . '/' . $terms[0]->slug . '/'; ?>">See all &rarr;</a></p>
 
 </div><!-- END .related-posts -->
 
