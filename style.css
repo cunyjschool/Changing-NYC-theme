@@ -21,6 +21,7 @@ body {
 	background-color: #F1F2F2;
 	color: #222222;
 	min-width: 1150px;
+	background-image: url(img/tiles/multitheme15_h450.png);
 }
 
 .wrap {
@@ -299,56 +300,14 @@ body.home-page .main .post {
 	padding-bottom: 0px;
 }
 
-/**
- * Property: background-image
- */
-body.archive.term-between-the-numbers {
-	background-image: url(img/tiles/numberscollage15_h674.png);
-}
-
-body.home-page .theme-row.term-between-the-numbers {
-	background-image: url(img/tiles/numberscollage25_h674.png);
-	-webkit-border-top-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	border-top-left-radius: 5px;
-	margin-left: -15px;
-	margin-top: -10px;
-}
-
-body.home-page .theme-row.term-moving-inmoving-out {
-	background-image: url(img/tiles/streetsigns25_h675.png);
-	margin-left: -15px;
-}
-
-body.archive.term-moving-inmoving-out {
-	background-image: url(img/tiles/streetsigns15_h675.png);
-}
-
-body.home-page .theme-row.term-neighborhood-anchors {
-	background-image: url(img/tiles/neighborhoodcollage25_h525.png);
-	margin-left: -15px;
-}
-
-body.archive.term-neighborhood-anchors {
-	background-image: url(img/tiles/neighborhoodcollage15_h525.png);
-}
-
 
 /**
  * Template: home.php
  */
 
 body.home-page .main .theme-row {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	width: 600px;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 10px;
-}
-
-body.home-page .main .theme-row .inner {
-	background-color: #FFFFFF;
-	padding: 10px;
 }
 
 body.home-page .main .theme-row h3 a {
