@@ -35,7 +35,6 @@
 		
 		<div class="post-meta float-right">
 			<ul>
-			<li class="author"><span class="label">By</span> <?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></li>
 			<li class="timestamp"><span class="label">Published</span> <?php the_time( 'F j, Y' ); ?></li>
 			<?php if ( $topics = get_the_term_list( $post->ID, 'cngnyc_topics', '', ', ', '' ) ) : ?>
 			<li class="topics"><span class="label">Topics</span> <?php echo $topics; ?></li>
@@ -48,6 +47,8 @@
 	<div class="primary-content w600">
 	
 	<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
+	
+		<div class="meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span></div>
 			
 		<div class="entry">
 			<?php the_excerpt(); ?>
