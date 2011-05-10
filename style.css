@@ -316,6 +316,10 @@ body.home-page .main .post {
  * Template: home.php
  */
 
+body.home-page .featured-live-event {
+	width: 600px;
+}
+
 body.home-page .main .theme-row {
 	padding-bottom: 10px;
 	width: 600px;
