@@ -148,6 +148,13 @@ ul li {
 	font-family: "Georgia", "Times", serif;	
 }
 
+.event-description {
+	color: #666666;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.1px;
+}
+
 .see-all {
 	font-style: italic;
 }

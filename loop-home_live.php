@@ -8,10 +8,10 @@
 		<h2>Live now: <?php echo $post->post_title; ?></h2>
 		
 		<?php if ( !empty( $post->post_excerpt ) ): ?>
-		<div class="description"><p><?php echo $post->post_excerpt; ?></p></div>
+		<div class="event-description"><p><?php echo $post->post_excerpt; ?></p></div>
 		<?php endif; ?>
 		
-		<div class="meta top-meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span> <span class="permalink"><a href="<?php the_permalink(); ?>">&#8734;</a></span></div>
+		<div class="meta top-meta">Reporting by <span class="author"><?php if ( function_exists( 'coauthors_posts_link' ) ) { coauthors_posts_link(); } else { the_author_posts_link(); } ?></span> <span class="permalink"><a href="<?php the_permalink(); ?>">&#8734;</a></span></div>
 		
 		<div class="entry">
 			<?php echo $post->post_content; ?>
