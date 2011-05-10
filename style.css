@@ -126,6 +126,10 @@ p, ul, ol {
 	font-family: "Georgia", "Times", serif;	
 }
 
+.see-all {
+	font-style: italic;
+}
+
 /**
  * Section: .header
  */
@@ -298,10 +302,19 @@ body.home-page .theme-row.term-moving-inmoving-out {
 	margin-left: -15px;
 }
 
+body.archive.term-moving-inmoving-out {
+	background-image: url(img/tiles/streetsigns15_h675.png);
+}
+
 body.home-page .theme-row.term-neighborhood-anchors {
 	background-image: url(img/tiles/neighborhoodcollage25_h525.png);
 	margin-left: -15px;
 }
+
+body.archive.term-neighborhood-anchors {
+	background-image: url(img/tiles/neighborhoodcollage15_h525.png);
+}
+
 
 /**
  * Template: home.php
