@@ -36,7 +36,8 @@ body {
 	-moz-border-radius-topright: 0;
 	border-radius: 5px;
 	border-top-right-radius: 0;
-	background-color: #FFFFFF;		
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 5px #999999;
 }
 
 .float-left {
@@ -280,7 +281,7 @@ body.home-page .main .post {
  * Property: background-image
  */
 body.archive.term-between-the-numbers {
-	background-image: url(img/tiles/numberscollage25_h674.png);
+	background-image: url(img/tiles/numberscollage15_h674.png);
 }
 
 body.home-page .theme-row.term-between-the-numbers {
@@ -292,15 +293,26 @@ body.home-page .theme-row.term-between-the-numbers {
 	margin-top: -10px;
 }
 
+body.home-page .theme-row.term-moving-inmoving-out {
+	background-image: url(img/tiles/streetsigns25_h675.png);
+	margin-left: -15px;
+}
+
+body.home-page .theme-row.term-neighborhood-anchors {
+	background-image: url(img/tiles/neighborhoodcollage25_h525.png);
+	margin-left: -15px;
+}
+
 /**
  * Template: home.php
  */
 
 body.home-page .main .theme-row {
-	padding-bottom: 10px;
-	width: 580px;
+	padding-bottom: 20px;
+	width: 600px;
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 10px;
 }
 
 body.home-page .main .theme-row .inner {
@@ -309,11 +321,20 @@ body.home-page .main .theme-row .inner {
 }
 
 body.home-page .main .theme-row h3 a {
-	color: #444444;
+	color: #222222;
 }
 
-body.home-page .main .theme-row .inner .description {
+body.home-page .main .theme-row h3 a:hover {
+	color: #41ad48;	
+}
+
+body.home-page .main .theme-row .inner .theme-description {
+	padding-bottom: 5px;
 	font-style: normal;
+	color: #444444;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
 }
 
 body.home-page .main .theme-row ul.posts {
@@ -429,4 +450,13 @@ body.home-page .main .theme-listing ul.posts {
  */
 body.archive.term-live .post.live-event {
 	width: 200px;
+}
+
+/**
+ * Element: footer
+ */
+.footer .wrap {
+	margin-left: 200px;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }

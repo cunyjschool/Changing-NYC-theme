@@ -1,10 +1,12 @@
+<div class="clear-both"></div>
+
 <div class="footer">
 	
 	<div class="wrap">
 		
+		<p>A project of the NY City News Service</p>
+		
 	</div><!-- END .wrap -->
-	
-	<div class="clear"></div>
 	
 </div><!-- END .footer -->
 

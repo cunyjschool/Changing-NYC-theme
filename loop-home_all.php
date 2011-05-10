@@ -19,7 +19,7 @@
 	<div class="inner">	
 	
 	<?php if ( !empty( $single_term->description ) ): ?>
-		<div class="description"><?php echo $single_term->description; ?></div>
+		<div class="theme-description"><?php echo $single_term->description; ?></div>
 	<?php endif; ?>
 	
 	<?php
@@ -55,12 +55,14 @@
 	</ul>
 
 	<div class="clear-left"></div>
-
-	<?php else: ?>
-
-	<?php endif; ?>
 	
 	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+
+	<?php else: ?>
+		
+	<div class="message info">Stories coming soon</div>
+
+	<?php endif; ?>
 	
 	</div><!-- END .inner -->
 	
