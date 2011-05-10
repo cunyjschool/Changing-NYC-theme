@@ -39,6 +39,10 @@ class cngnyc {
 	function init() {
 		global $wp_taxonomies;
 		
+		if ( is_admin_bar_showing() ) {			
+			add_action( 'admin_bar_menu', array( &$this, 'add_admin_bar_items' ), 70 );
+		}
+		
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array(&$this, 'add_admin_menu_items') );
 		}		
@@ -350,6 +354,25 @@ class cngnyc {
 		</div>
 		<?php
 	}
+	
+	/**
+	 * add_admin_bar_items()
+	 * Custom menu items for the admin bar
+	 */
+	function add_admin_bar_items() {
+		global $wp_admin_bar;
+
+		// Add theme management links for users who can	
+		if ( current_user_can('edit_theme_options') ) {
+			$args = array(
+				'title' => 'Theme Options',
+				'href' => admin_url( 'themes.php?page=cngnyc_options' ),
+				'parent' => 'appearance',
+			);
+			$wp_admin_bar->add_menu( $args );
+		}
+
+	} // END add_admin_bar_items()
 
 	/**
 	 * after_setup_theme()
