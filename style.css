@@ -509,9 +509,19 @@ body.single .post-meta {
 /**
  * Page: Live in the City
  */
-body.archive.term-live .post.live-event {
+
+body.archive.term-live .event-date {
+	color: #888888;
 	width: 200px;
+	font-size: 24px;
+	font-weight: 300;
+	padding-top: 17px;
 }
+
+body.archive.term-live .content .post.live-event {
+	margin-left: 200px;
+}
+
 
 /**
  * Element: footer
