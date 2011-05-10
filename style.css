@@ -277,11 +277,43 @@ body.home-page .main .post {
 }
 
 /**
+ * Property: background-image
+ */
+body.archive.term-between-the-numbers {
+	background-image: url(img/tiles/numberscollage25_h674.png);
+}
+
+body.home-page .theme-row.term-between-the-numbers {
+	background-image: url(img/tiles/numberscollage25_h674.png);
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	border-top-left-radius: 5px;
+	margin-left: -15px;
+	margin-top: -10px;
+}
+
+/**
  * Template: home.php
  */
 
 body.home-page .main .theme-row {
 	padding-bottom: 10px;
+	width: 580px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body.home-page .main .theme-row .inner {
+	background-color: #FFFFFF;
+	padding: 10px;
+}
+
+body.home-page .main .theme-row h3 a {
+	color: #444444;
+}
+
+body.home-page .main .theme-row .inner .description {
+	font-style: normal;
 }
 
 body.home-page .main .theme-row ul.posts {
@@ -289,7 +321,7 @@ body.home-page .main .theme-row ul.posts {
 }
 
 body.home-page .main .theme-row ul.posts li {
-	width: 190px;
+	width: 175px;
 	padding-right: 10px;
 }
 
