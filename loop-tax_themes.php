@@ -64,7 +64,7 @@
 
 <?php else: ?>
 	
-	<div class="message info">There aren't any pieces published yet. Come back soon and there will be.</div>
+	<div class="message info">There aren't any pieces published yet. Come back soon.</div>
 
 <?php endif; ?>			
 
