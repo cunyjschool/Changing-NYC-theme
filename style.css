@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 0.2
+Version: 0.3
 License: GNU General Public License
 License URI: license.txt
 */
@@ -21,6 +21,7 @@ body {
 	background-color: #F1F2F2;
 	color: #222222;
 	min-width: 1150px;
+	background-image: url(img/tiles/multitheme15_h450.png);
 }
 
 .wrap {
@@ -36,7 +37,10 @@ body {
 	-moz-border-radius-topright: 0;
 	border-radius: 5px;
 	border-top-right-radius: 0;
-	background-color: #FFFFFF;		
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 5px #999999;
+	min-height: 400px;
+	padding-bottom: 10px;
 }
 
 .float-left {
@@ -103,9 +107,29 @@ h4 {
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
+
+h1 a,
+h2 a,
+h3 a,
+h4 a {
+	color: #222222;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover {
+	color: #41ad48;
+	text-decoration: underline;
+}
+
 p, ul, ol {
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+
+ul li {
+	list-style-type: square;
 }
 
 .message {
@@ -123,6 +147,10 @@ p, ul, ol {
 	color: #888888;
 	font-style: italic;
 	font-family: "Georgia", "Times", serif;	
+}
+
+.see-all {
+	font-style: italic;
 }
 
 /**
@@ -217,23 +245,7 @@ p, ul, ol {
 	padding-bottom: 10px;
 }
 
-.main .post h2,
-.main .post h2 a,
-.main .post h3,
-.main .post h3 a,
-.main .post h4,
-.main .post h4 a {
-	color: #222222;
-}
-
-.main .post h2 a:hover,
-.main .post h3 a:hover,
-.main .post h4 a:hover {
-	text-decoration: underline;
-	color: #41ad48;
-}
-
-.main .post .meta {
+.main .post .post-meta {
 	color: #888888;
 }
 
@@ -266,6 +278,18 @@ p, ul, ol {
  * Property: width
  */
 
+.w600 {
+	width: 600px;
+}
+
+.w280 {
+	width: 280px;
+}
+
+.w260 {
+	width: 280px;
+}
+
 body.single .main .content {
 	width: 600px;
 }
@@ -276,21 +300,41 @@ body.home-page .main .post {
 	padding-bottom: 0px;
 }
 
+
 /**
  * Template: home.php
  */
 
 body.home-page .main .theme-row {
 	padding-bottom: 10px;
+	width: 600px;
+}
+
+body.home-page .main .theme-row h3 a {
+	color: #222222;
+}
+
+body.home-page .main .theme-row h3 a:hover {
+	color: #41ad48;	
+}
+
+body.home-page .main .theme-row .inner .theme-description {
+	padding-bottom: 5px;
+	font-style: normal;
+	color: #444444;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 0.1px;
 }
 
 body.home-page .main .theme-row ul.posts {
-	list-style-type: none;
+
 }
 
 body.home-page .main .theme-row ul.posts li {
-	width: 190px;
+	width: 175px;
 	padding-right: 10px;
+	list-style-type: none;	
 }
 
 body.home-page .main .theme-row ul.posts li .meta {
@@ -319,9 +363,57 @@ body.home-page .main .theme-listing .item {
 }
 
 body.home-page .main .theme-listing ul.posts {
+
+}
+
+body.home-page .main .theme-listing ul.posts li {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+/**
+ * loop-tax_themes.php
+ */
+
+body.archive .theme-description {
+	padding-top: 10px;
+}
+
+.post-meta,
+.sidebar.post-secondary {
+	width: 250px;
+	padding-top: 5px;
+}
+
+body.single .post-meta {
+	padding-top: 10px;
+}
+
+.post-meta ul {
 	list-style-type: none;
 }
 
+.post-meta ul li {
+	padding-bottom: 3px;
+	text-transform: uppercase;
+	color: #444444;
+	list-style-type: none;
+}
+
+.post-meta ul li span {
+	text-transform: none;
+	color: #888888;
+}
+
+.sidebar .related-posts {
+	
+}
+
+.sidebar .related-posts ul li {
+	margin-left: 15px;
+	margin-right: 15px;
+	color: #888888;
+}
 
 /**
  * Element: sidebar.sidebar-taxonomy
@@ -383,13 +475,25 @@ body.home-page .main .theme-listing ul.posts {
  */
 .sidebar.live-coverage {
 	padding-top: 10px;
-	width: 265px;
-	padding-right: 5px;
+	width: 260px;
+	padding-right: 10px;
+}
+
+.sidebar.live-coverage .theme-description {
+	padding-bottom: 5px;
+}
+
+.sidebar.live-coverage .event-date {
+	color: #888888;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 40px;
 }
 
 .sidebar.live-coverage .post.live-event {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	margin-left: 50px;
+	padding-top: 2px;
+	padding-bottom: 3px;
 }
 
 /**
@@ -397,4 +501,13 @@ body.home-page .main .theme-listing ul.posts {
  */
 body.archive.term-live .post.live-event {
 	width: 200px;
+}
+
+/**
+ * Element: footer
+ */
+.footer .wrap {
+	margin-left: 200px;
+	padding-top: 10px;
+	padding-bottom: 30px;
 }

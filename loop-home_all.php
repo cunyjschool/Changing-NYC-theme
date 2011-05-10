@@ -12,14 +12,14 @@
 	
 	<?php if ( $single_term->slug == 'live') continue; ?>
 	
-	<div class="theme-row">
-		
-	<div class="theme-information">
+	<div class="theme-row term-<?php echo $single_term->slug; ?>">
 	
 	<h3><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>"><?php echo $single_term->name; ?></a></h3>
 	
+	<div class="inner">	
+	
 	<?php if ( !empty( $single_term->description ) ): ?>
-		<div class="description"><?php echo $single_term->description; ?></div>
+		<div class="theme-description"><?php echo $single_term->description; ?></div>
 	<?php endif; ?>
 	
 	<?php
@@ -35,8 +35,6 @@
 		);
 		$theme_posts = new WP_Query( $args );
 	?>
-	
-	</div><!-- END .theme-information -->
 	
 	<?php if ( $theme_posts->have_posts() && $theme_posts->post_count >= 3 ) : ?>
 		
@@ -57,12 +55,16 @@
 	</ul>
 
 	<div class="clear-left"></div>
+	
+	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
 
 	<?php else: ?>
+		
+	<div class="message info">Stories coming soon</div>
 
 	<?php endif; ?>
 	
-	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+	</div><!-- END .inner -->
 	
 	</div><!-- END .row -->
 

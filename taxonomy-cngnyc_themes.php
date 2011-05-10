@@ -2,15 +2,13 @@
 
 <div class="main">
 	
-	<?php get_sidebar('left'); ?>	
+	<?php get_sidebar('left'); ?>		
 	
 	<div class="wrap float-left">
 		
-		<?php get_sidebar('single'); ?>
+		<?php get_template_part( 'loop', 'tax_themes' ); ?>
 		
-		<?php get_template_part( 'loop', 'single' ); ?>
-	
-		<div class="clear-both"></div>
+		<div class="clear-both"></div>		
 
 	</div><!-- END .wrap -->
 
