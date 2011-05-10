@@ -89,7 +89,6 @@ h1 {
 h2 {
 	font-size: 30px;
 	line-height: 38px;
-	padding-bottom: 10px;
 	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
@@ -252,6 +251,7 @@ ul li {
 .main .post .meta.top-meta {
 	padding-top: 5px;
 	padding-bottom: 3px;
+	color: #888888;
 }
 
 .main .post .meta span {
@@ -349,11 +349,6 @@ body.home-page .main .theme-row ul.posts li h4 {
 body.home-page .main .theme-row .see-all {
 	padding-top: 10px;
 	font-style:italic;
-}
-
-body.home-page .featured-live-event h2 {
-	padding-top: 5px;
-	padding-bottom: 5px;
 }
 
 body.home-page .main .theme-listing .item {
