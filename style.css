@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 0.4
+Version: 0.9
 License: GNU General Public License
 License URI: license.txt
 */
@@ -509,9 +509,19 @@ body.single .post-meta {
 /**
  * Page: Live in the City
  */
-body.archive.term-live .post.live-event {
+
+body.archive.term-live .event-date {
+	color: #888888;
 	width: 200px;
+	font-size: 24px;
+	font-weight: 300;
+	padding-top: 17px;
 }
+
+body.archive.term-live .content .post.live-event {
+	margin-left: 200px;
+}
+
 
 /**
  * Element: footer
