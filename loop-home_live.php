@@ -79,7 +79,7 @@
 
 	<?php else: endif; ?>
 		
-	<p><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></p>
+	<p class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></p>
 	
 	</div><!-- END .row -->
 	
