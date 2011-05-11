@@ -40,7 +40,7 @@
 	</ul>
 	
 	<ul>
-		<li class="facebook-share"><iframe src="http://www.facebook.com/plugins/like.php?href&amp;send=true&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe></li>
+		<li class="facebook-share"><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=358716459420&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="100" show_faces="false" font=""></fb:like></li>
 		<li class="share-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="">Tweet</a></li>
 	</ul>
 	
