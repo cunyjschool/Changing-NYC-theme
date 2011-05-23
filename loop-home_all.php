@@ -24,6 +24,7 @@
 	
 	<?php
 		$args = array(
+			'orderby' => 'rand',			
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'cngnyc_themes',
@@ -42,7 +43,13 @@
 
 	<?php while ( $theme_posts->have_posts()) : $theme_posts->the_post(); ?>
 
-		<li class="post float-left">				
+		<li class="post float-left">
+			
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="featured-image">
+				<?php the_post_thumbnail( 'thumbnail' ); ?>
+			</div>
+		<?php endif; ?>						
 
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h4>
 
@@ -56,7 +63,7 @@
 
 	<div class="clear-left"></div>
 	
-	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all stories &rarr;</a></div>
 
 	<?php else: ?>
 		
