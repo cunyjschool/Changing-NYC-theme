@@ -349,8 +349,9 @@ body.home-page .main .theme-row ul.posts {
 }
 
 body.home-page .main .theme-row ul.posts li {
-	width: 175px;
-	padding-right: 10px;
+	width: 150px;
+	padding-left: 25px;
+	padding-right: 25px;
 	list-style-type: none;	
 }
 
@@ -366,6 +367,7 @@ body.home-page .main .theme-row ul.posts li h4 {
 body.home-page .main .theme-row .see-all {
 	padding-top: 10px;
 	font-style:italic;
+	text-align: right;
 }
 
 body.home-page .main .theme-listing .item {
@@ -384,10 +386,18 @@ body.home-page .main .theme-listing ul.posts li {
 }
 
 /**
- * Template: single.php
+ * Element: .featured-image
  */
+
+.main .featured-image {
+	border: #EEEEEE 3px solid;	
+}
+
+body.home-page .featured-image {
+	margin-left: -3px;
+}
+
 body.single .content .featured-image {
-	border: #EEEEEE 3px solid;
 	margin-left: -6px;
 	margin-top: 5px;
 	margin-bottom: 5px;
