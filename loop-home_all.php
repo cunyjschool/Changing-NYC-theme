@@ -63,7 +63,7 @@
 
 	<div class="clear-left"></div>
 	
-	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all &rarr;</a></div>
+	<div class="see-all"><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $single_term ) . '/' . $single_term->slug . '/'; ?>">See all stories &rarr;</a></div>
 
 	<?php else: ?>
 		

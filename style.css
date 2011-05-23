@@ -159,6 +159,7 @@ ul li {
 
 .see-all {
 	font-style: italic;
+	text-align: right;
 }
 
 /**
@@ -366,8 +367,6 @@ body.home-page .main .theme-row ul.posts li h4 {
 
 body.home-page .main .theme-row .see-all {
 	padding-top: 10px;
-	font-style:italic;
-	text-align: right;
 }
 
 body.home-page .main .theme-listing .item {
