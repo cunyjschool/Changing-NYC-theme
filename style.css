@@ -395,6 +395,20 @@ body.home-page .main .theme-listing ul.posts li {
 
 .main .featured-image {
 	border: #EEEEEE 3px solid;	
+	background-color: #EEEEEE;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+.main .featured-image .image-meta {
+	padding-top: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main .featured-image .image-meta .image-credit {
+	color: #888888;
 }
 
 body.home-page .featured-image,
