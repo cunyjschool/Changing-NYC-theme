@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 1.0b
+Version: 1.0c
 License: GNU General Public License
 License URI: license.txt
 */
@@ -263,7 +263,7 @@ ul li {
 	padding-top: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 
 .main .post {
@@ -303,6 +303,83 @@ ul li {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+}
+
+/**
+ * Section: #comments
+ */
+
+#comments {
+	padding-top: 20px;
+}
+
+#comments h3,
+#comments h3 a {
+	color: #555555;
+}
+
+#comments h3#reply-title {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#comments ol.commentlist {
+	list-style-type: none;
+}
+
+#comments ol.commentlist li {
+	border-bottom: 1px solid #F2F2F2;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#comments ol.commentlist .comment-body {
+	font-size: 16px;
+	line-height: 22px;
+	font-family: "Georgia", "Times", serif;
+}
+
+#comments ol.commentlist .comment-meta {
+	color: #888888;
+	width: 200px;
+	padding-top: 5px;
+}
+
+#comments ol.commentlist .comment-meta img {
+	border: #EEEEEE 3px solid;	
+	background-color: #EEEEEE;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-left: 10px;
+}
+
+#comments #commentform p input,
+#comments #commentform p textarea {
+	display: block;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#comments #commentform p input {
+	width: 200px;
+	padding: 3px;
+}
+
+#comments #commentform p textarea {
+	width: 450px;
+	padding: 5px;
+}
+
+#comments #commentform p input#submit {
+	width: 150px;
+}
+
+#comments #commentform p.form-allowed-tags {
+	color: #888888;
+}
+
+#comments #commentform span.required {
+	color: #FF0000;
 }
 
 /**
