@@ -31,6 +31,7 @@
 	<?php
 		$i = 0;
 		$total = 0;
+		$normalized_total = $theme_posts->post_count - 1;		
 	?>
 	
 	<div class="display-table">
@@ -54,20 +55,19 @@
 		<div class="entry">
 			<?php the_excerpt(); ?>
 		</div>
-		
-		<div class="meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>		
 	
 	</div><!-- END .post.display-table-cell -->
 	
 	<?php
 		$i++;
 		$total++;
-	 ?>
+	 ?>	
 	
-	<?php if ( $i == 3 || $total == $theme_posts->found_posts ): ?>
+	<?php if ( $i == 3 || $total == $theme_posts->post_count ): ?>
+
 		</div><!-- END .display-table-row -->
-		<?php $i = 1; ?>
-	<?php endif; ?>
+		<?php $i = 0; ?>
+	<?php endif; ?>	
 	
 <?php endwhile; ?>
 

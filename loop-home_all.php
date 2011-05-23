@@ -37,7 +37,7 @@
 		$theme_posts = new WP_Query( $args );
 	?>
 	
-	<?php if ( $theme_posts->have_posts() && $theme_posts->post_count >= 3 ) : ?>
+	<?php if ( $theme_posts->have_posts() ) : ?>
 		
 	<ul class="posts">	
 
@@ -52,8 +52,6 @@
 		<?php endif; ?>						
 
 		<h4><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h4>
-
-			<div class="meta bottom-meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>
 
 		</li><!-- END .post -->
 
