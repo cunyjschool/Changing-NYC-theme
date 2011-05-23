@@ -83,13 +83,11 @@ a img {
 h1 {
 	font-size: 36px;
 	line-height: 42px;
-	font-family: "Droid Serif", "Georgia", "Times", serif;	
 }
 
 h2 {
 	font-size: 30px;
 	line-height: 38px;
-	font-family: "Droid Serif", "Georgia", "Times", serif;
 	padding-bottom: 5px;
 	padding-top: 5px;
 }
@@ -99,13 +97,20 @@ h3 {
 	line-height: 28px;
 	padding-top: 5px;
 	padding-bottom: 8px;	
-	font-family: "Droid Serif", "Georgia", "Times", serif;
 }
 
 h4 {
 	padding-top: 3px;
-	padding-bottom: 3px;	
-	font-family: "Droid Serif", "Georgia", "Times", serif;	
+	padding-bottom: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Droid Serif", "Georgia", "Times", serif;		
 }
 
 
@@ -392,7 +397,8 @@ body.home-page .main .theme-listing ul.posts li {
 	border: #EEEEEE 3px solid;	
 }
 
-body.home-page .featured-image {
+body.home-page .featured-image,
+.sidebar.post-secondary .featured-image {
 	margin-left: -3px;
 }
 
@@ -413,8 +419,15 @@ body.archive .theme-description {
 .post-meta,
 .sidebar.post-secondary {
 	width: 250px;
-	padding-top: 5px;
+	padding-top: 10px;
+	padding-right: 15px;
 }
+
+.sidebar.post-secondary h4 {
+	font-size: 16px;
+	line-height: 22px;
+}
+
 
 body.single .post-meta {
 	padding-top: 10px;
@@ -440,10 +453,34 @@ body.single .post-meta {
 	
 }
 
-.sidebar .related-posts ul li {
-	margin-left: 15px;
-	margin-right: 15px;
+.sidebar .related-posts ul {
+	list-style-type: none;
+}
+
+.sidebar .related-posts ul li.post {
 	color: #888888;
+	list-style-type: none;
+	padding-bottom: 5px;
+}
+
+.sidebar .related-posts ul li .featured-image {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.sidebar .related-posts ul li .featured-image img {
+	width: 75px;
+	height: 75px;
+}
+
+.sidebar .related-posts ul li h5 {
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.sidebar .related-posts ul li .entry {
+	font-size: 11px;
+	line-height: 17px;
 }
 
 /**

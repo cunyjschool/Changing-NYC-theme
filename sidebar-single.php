@@ -24,12 +24,26 @@
 	
 	<h4><a href="<?php bloginfo('url'); ?>/<?php echo cngnyc_get_term_base( $terms[0] ) . '/' . $terms[0]->slug . '/'; ?>"><?php echo $terms[0]->name; ?></a></h4>
 	
+	<?php if ( !empty( $terms[0]->description ) ): ?>
+		<div class="theme-description"><?php echo $terms[0]->description; ?></div>
+	<?php endif; ?>	
+	
 <ul class="posts">	
 
 <?php while ( $related_posts->have_posts()) : $related_posts->the_post(); ?>
 
-	<li class="post">				
-		<h5><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>
+	<li class="post clear-left">
+	
+		<?php if ( has_post_thumbnail() ) : ?>
+		<div class="featured-image float-left">
+			<?php the_post_thumbnail( 'thumbnail' ); ?>
+		</div>
+		<?php endif; ?>
+		
+		<h5><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h5>			
+		<div class="entry">
+			<?php the_excerpt(); ?>
+		</div>
 	</li><!-- END .post -->
 
 <?php endwhile; ?>
