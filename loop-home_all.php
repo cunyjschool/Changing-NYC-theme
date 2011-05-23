@@ -37,7 +37,7 @@
 		$theme_posts = new WP_Query( $args );
 	?>
 	
-	<?php if ( $theme_posts->have_posts() && $theme_posts->post_count >= 3 ) : ?>
+	<?php if ( $theme_posts->have_posts() ) : ?>
 		
 	<ul class="posts">	
 
