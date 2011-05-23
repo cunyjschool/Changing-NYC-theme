@@ -10,7 +10,20 @@
 	
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="featured-image">
-			<?php the_post_thumbnail( 'large' ); ?>
+			<?php
+			the_post_thumbnail( 'large' );
+			$img_id = get_post_meta( get_the_id(), '_thumbnail_id', true );
+			$img_post = get_post( $img_id );
+			if ( !empty( $img_post->post_excerpt ) ) {
+				echo '<div class="image-meta">';
+				$html = '<span class="image-caption">' . $img_post->post_excerpt . '</span>';
+				$img_meta = wp_get_attachment_metadata( $img_id );
+				if ( $img_meta['image_meta']['credit'] ) {
+					$html .= '<em class="image-credit"> - Photo by ' . $img_meta['image_meta']['credit'] . '</em>';
+				}
+				echo $html;
+				echo '</div>';
+			} ?>
 		</div>
 	<?php endif; ?>	
 

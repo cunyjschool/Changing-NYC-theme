@@ -4,7 +4,7 @@ Theme URI: http://changingnyc.journalism.cuny.edu/
 Description: Craft II and Interactive II joint project for Spring 2011
 Author: Daniel Bachhuber, Kirsti Itameri, Celia Gorman
 Author URI: http://www.journalism.cuny.edu/
-Version: 1.0a
+Version: 1.0b
 License: GNU General Public License
 License URI: license.txt
 */
@@ -136,6 +136,18 @@ p, ul, ol {
 
 ul li {
 	list-style-type: square;
+}
+
+.display-table {
+	display: table;
+}
+
+.display-table-row {
+	display: table-row;
+}
+
+.display-table-cell {
+	display: table-cell;
 }
 
 .message {
@@ -395,6 +407,20 @@ body.home-page .main .theme-listing ul.posts li {
 
 .main .featured-image {
 	border: #EEEEEE 3px solid;	
+	background-color: #EEEEEE;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;	
+}
+
+.main .featured-image .image-meta {
+	padding-top: 4px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.main .featured-image .image-meta .image-credit {
+	color: #888888;
 }
 
 body.home-page .featured-image,
@@ -414,6 +440,24 @@ body.single .content .featured-image {
 
 body.archive .theme-description {
 	padding-top: 10px;
+}
+
+body.archive .display-table .post.display-table-cell {
+	width: 275px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body.archive .display-table .post.display-table-cell .featured-image {
+	margin-left: -3px;
+}
+
+body.archive .display-table .post.display-table-cell .featured-image img {
+	width: 275px;
+}
+
+body.archive .display-table .post.display-table-cell h3 {
+	padding-bottom: 0;
 }
 
 .post-meta,

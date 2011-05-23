@@ -14,6 +14,9 @@
 		),
 		'showposts' => 5,
 		'orderby' => 'rand',
+		'post__not_in' => array(
+			$post->ID,
+		),
 	);
 	$related_posts = new WP_Query( $args );
 ?>
@@ -36,7 +39,7 @@
 	
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="featured-image float-left">
-			<?php the_post_thumbnail( 'thumbnail' ); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
 		</div>
 		<?php endif; ?>
 		
