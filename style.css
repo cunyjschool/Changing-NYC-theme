@@ -442,6 +442,24 @@ body.archive .theme-description {
 	padding-top: 10px;
 }
 
+body.archive .display-table .post.display-table-cell {
+	width: 275px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+body.archive .display-table .post.display-table-cell .featured-image {
+	margin-left: -3px;
+}
+
+body.archive .display-table .post.display-table-cell .featured-image img {
+	width: 275px;
+}
+
+body.archive .display-table .post.display-table-cell h3 {
+	padding-bottom: 0;
+}
+
 .post-meta,
 .sidebar.post-secondary {
 	width: 250px;

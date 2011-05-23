@@ -42,14 +42,20 @@
 	<?php endif; ?>
 	
 	<div class="post display-table-cell">
+		
+	<?php if ( has_post_thumbnail() ) : ?>
+		<div class="featured-image">
+			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array( 275, 180 ) ); ?></a>
+		</div>
+	<?php endif; ?>		
 	
-	<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
-	
-		<div class="meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>
+		<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
 			
 		<div class="entry">
 			<?php the_excerpt(); ?>
 		</div>
+		
+		<div class="meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span></div>		
 	
 	</div><!-- END .post.display-table-cell -->
 	
