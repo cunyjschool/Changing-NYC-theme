@@ -138,6 +138,18 @@ ul li {
 	list-style-type: square;
 }
 
+.display-table {
+	display: table;
+}
+
+.display-table-row {
+	display: table-row;
+}
+
+.display-table-cell {
+	display: table-cell;
+}
+
 .message {
 	padding-top: 7px;
 	padding-bottom: 7px;

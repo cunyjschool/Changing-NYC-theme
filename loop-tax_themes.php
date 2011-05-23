@@ -17,34 +17,31 @@
 				array(
 					'taxonomy' => 'cngnyc_themes',
 					'field' => 'slug',
-					'terms' => $single_term->slug,
+					'terms' => $term->slug,
 				)
 			),
 			'posts_per_page' => -1,
-			'orderby' => 'title',
-			'order' => 'asc',
+			'orderby' => 'rand',
 		);
 		$theme_posts = new WP_Query( $args );
 	?>
 	
-<?php if ( have_posts() ) : ?>
+<?php if ( $theme_posts->have_posts() ) : ?>
 	
-<?php while (have_posts()) : the_post(); ?>
+	<?php
+		$i = 0;
+		$total = 0;
+	?>
 	
-	<div class="post">
-		
-		<div class="post-meta float-right">
-			<ul>
-			<li class="timestamp"><span class="label">Published</span> <?php the_time( 'F j, Y' ); ?></li>
-			<?php if ( $topics = get_the_term_list( $post->ID, 'cngnyc_topics', '', ', ', '' ) ) : ?>
-			<li class="topics"><span class="label">Topics</span> <?php echo $topics; ?></li>
-			<?php endif; ?>
-			<?php if ( $media = get_the_term_list( $post->ID, 'cngnyc_media', '', ', ', '' ) ) : ?>
-			<li class="media"><span class="label">Media</span> <?php echo $media; ?></li>
-			<?php endif; ?>
-		</div><!-- END .meta -->
+	<div class="display-table">
 	
-	<div class="primary-content w600">
+<?php while ( $theme_posts->have_posts()) : $theme_posts->the_post(); ?>
+	
+	<?php if ( $i == 0 ) : ?>
+		<div class="display-table-row">
+	<?php endif; ?>
+	
+	<div class="post display-table-cell">
 	
 	<h3><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h3>
 	
@@ -53,14 +50,22 @@
 		<div class="entry">
 			<?php the_excerpt(); ?>
 		</div>
-		
-	</div><!-- END .primary-content -->
 	
-	</div><!-- END .post -->
+	</div><!-- END .post.display-table-cell -->
 	
-	<div class="clear-right"></div>
+	<?php
+		$i++;
+		$total++;
+	 ?>
+	
+	<?php if ( $i == 3 || $total == $theme_posts->found_posts ): ?>
+		</div><!-- END .display-table-row -->
+		<?php $i = 1; ?>
+	<?php endif; ?>
 	
 <?php endwhile; ?>
+
+	</div><!-- END .display-table -->
 
 <?php else: ?>
 	
