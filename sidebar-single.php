@@ -1,17 +1,6 @@
 <div class="sidebar float-right post-secondary">
 <?php $post = get_queried_object(); ?>
 
-<div class="post-meta">
-	<ul>
-	<li class="timestamp"><span class="label">Published</span> <?php the_time( 'F j, Y', $post->ID ); ?></li>
-	<?php if ( $topics = get_the_term_list( $post->ID, 'cngnyc_topics', '', ', ', '' ) ) : ?>
-	<li class="topics"><span class="label">Topics</span> <?php echo $topics; ?></li>
-	<?php endif; ?>
-	<?php if ( $media = get_the_term_list( $post->ID, 'cngnyc_media', '', ', ', '' ) ) : ?>
-	<li class="media"><span class="label">Media</span> <?php echo $media; ?></li>
-	<?php endif; ?>
-</div><!-- END .meta -->
-
 <?php
 
 	$terms = wp_get_object_terms( $post->ID, 'cngnyc_themes' );
