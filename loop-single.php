@@ -41,6 +41,8 @@
 	</div><!-- END .meta -->
 	
 </div><!-- END .post -->
+
+<?php comments_template( '', true ); ?>
 	
 <?php endwhile ; endif; ?>			
 

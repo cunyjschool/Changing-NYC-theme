@@ -263,7 +263,7 @@ ul li {
 	padding-top: 10px;
 	padding-left: 15px;
 	padding-right: 15px;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 
 .main .post {
@@ -303,6 +303,43 @@ ul li {
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+}
+
+/**
+ * Section: #comments
+ */
+
+#comments h3,
+#comments h3 a {
+	color: #555555;
+}
+
+#comments #commentform p input,
+#comments #commentform p textarea {
+	display: block;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+#comments #commentform p input {
+	width: 200px;
+	padding: 3px;
+}
+
+#comments #commentform p textarea {
+	width: 450px;
+	padding: 5px;
+}
+
+#comments #commentform p input#submit {
+	width: 150px;
+}
+
+#comments #commentform p.form-allowed-tags {
+	color: #888888;
+}
+
+#comments #commentform span.required {
+	color: #FF0000;
 }
 
 /**
