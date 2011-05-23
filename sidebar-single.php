@@ -14,6 +14,9 @@
 		),
 		'showposts' => 5,
 		'orderby' => 'rand',
+		'post__not_in' => array(
+			$post->ID,
+		),
 	);
 	$related_posts = new WP_Query( $args );
 ?>
