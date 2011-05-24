@@ -406,16 +406,32 @@ body.single .main .content {
 	width: 600px;
 }
 
-body.single-attachment .main .content {
-	width: auto;
-}
-
 body.single .main .post,
 body.home-page .main .post {
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
 
+/**
+ * Template: image.php
+ */
+
+body.single-attachment .main .content {
+	width: auto;
+}
+
+body.single-attachment .main .content .image-caption {
+	padding-top: 5px;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: "Georgia", "Times", serif;
+}
+
+body.single-attachment .main .content .image-description {
+	font-size: 14px;
+	line-height: 20px;
+	font-family: "Georgia", "Times", serif;
+}
 
 /**
  * Template: home.php
