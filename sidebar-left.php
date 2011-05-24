@@ -11,9 +11,12 @@
 	);
 	$theme_terms = get_terms( 'cngnyc_themes', $args );
 	$place_terms = get_terms( 'cngnyc_places', $args );	
-	
-	if ( is_single() ) {
-		$post_terms = wp_get_object_terms( $post->ID, $all_taxonomies );
+
+	$post = get_queried_object();
+	if ( is_attachment() ) {
+		$post_terms = wp_get_object_terms( $post->post_parent, $all_taxonomies );		
+	} else if ( is_single( ) ) {
+		$post_terms = wp_get_object_terms( $post->ID, $all_taxonomies );		
 	} else if ( is_tax() ) {
 		$post_terms = array( get_queried_object() );
 	} else {

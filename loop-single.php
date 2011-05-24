@@ -8,7 +8,7 @@
 	
 	<div class="meta top-meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span>&nbsp;&nbsp;&nbsp;Published <span class="timestamp"><?php the_time( 'F j, Y', $post->ID ); ?></span></div>
 	
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( has_post_thumbnail() && 'gallery' != get_post_format() ) : ?>
 		<div class="featured-image">
 			<?php
 			the_post_thumbnail( 'large' );
@@ -16,12 +16,7 @@
 			$img_post = get_post( $img_id );
 			if ( !empty( $img_post->post_excerpt ) ) {
 				echo '<div class="image-meta">';
-				$html = '<span class="image-caption">' . $img_post->post_excerpt . '</span>';
-				$img_meta = wp_get_attachment_metadata( $img_id );
-				if ( $img_meta['image_meta']['credit'] ) {
-					$html .= '<em class="image-credit"> - Photo by ' . $img_meta['image_meta']['credit'] . '</em>';
-				}
-				echo $html;
+				echo '<span class="image-caption">' . $img_post->post_excerpt . '</span>';
 				echo '</div>';
 			} ?>
 		</div>
