@@ -29,15 +29,21 @@
 	
 	<div class="wrap">
 		
+		<?php if ( !is_single() ): ?>
+		
 		<a href="<?php bloginfo('url'); ?>"><img class="site-logo float-left" src="<?php bloginfo('template_directory'); ?>/img/censuslogo2_75.png" width="130px" height="75px" /></a>
 		
 		<div class="site-description"><?php cngnyc_project_description(); ?></div>
 
 		<div class="clear-both"></div>
+
+		<?php endif; ?>			
 		
 		<div class="float-right a-project-of">
 			<a href="http://nycitynewsservice.com/">A project of&nbsp;&nbsp;&nbsp;<img class="nycitynewsservice-logo" src="<?php bloginfo('template_directory'); ?>/img/nycitynewsservice_15.png" height="15px" width="102px" /></a>
-		</div>		
+		</div>
+		
+		<div class="clear-right"></div>
 	
 	</div><!-- END .wrap -->
 	

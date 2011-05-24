@@ -256,6 +256,10 @@ ul li {
 	text-decoration: none;
 }
 
+body.single .header .wrap {
+	padding-top: 20px;
+}
+
 /**
  * Section: .main
  */
@@ -631,6 +635,11 @@ body.single .post-meta {
 /**
  * Element: sidebar.sidebar-taxonomy
  */
+
+.sidebar.sidebar-taxonomy .site-logo {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
 .sidebar.sidebar-taxonomy {
 	text-align: right;
