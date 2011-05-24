@@ -437,6 +437,22 @@ body.single-attachment .main .content .image-description {
 	font-family: "Georgia", "Times", serif;
 }
 
+body.single-attachment .main .content .gallery-thumbnail a img {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: #EEEEEE 3px solid;	
+	background-color: #EEEEEE;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+body.single-attachment .main .content .gallery-thumbnail.active a img {
+	border-color: #41ad48;
+}
+
 /**
  * Template: home.php
  */
