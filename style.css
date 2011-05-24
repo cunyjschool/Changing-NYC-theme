@@ -758,4 +758,17 @@ body.archive.term-live .content .post.live-event {
 	margin-left: 200px;
 	padding-top: 10px;
 	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #888888;
+}
+
+.footer .wrap a {
+	color: #888888;
+	text-decoration: underline;
+}
+
+.footer .wrap a:hover {
+	color: #41ad48;
+	text-decoration: none;
 }
