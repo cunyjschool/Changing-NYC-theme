@@ -382,7 +382,7 @@ class cngnyc {
 		$post_formats = array(
 			'audio',
 			'gallery',
-			'image',
+			'video',
 		);
 		add_theme_support( 'post-formats', $post_formats );
 		add_post_type_support( 'post', 'post-formats' );

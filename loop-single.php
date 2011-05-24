@@ -8,7 +8,7 @@
 	
 	<div class="meta top-meta">By <span class="author"><?php if ( function_exists( 'coauthors_posts_links' ) ) { coauthors_posts_links(); } else { the_author_posts_link(); } ?></span>&nbsp;&nbsp;&nbsp;Published <span class="timestamp"><?php the_time( 'F j, Y', $post->ID ); ?></span></div>
 	
-	<?php if ( has_post_thumbnail() && 'gallery' != get_post_format() ) : ?>
+	<?php if ( has_post_thumbnail() && 'gallery' != get_post_format() && 'video' != get_post_format() ) : ?>
 		<div class="featured-image">
 			<?php
 			the_post_thumbnail( 'large' );
