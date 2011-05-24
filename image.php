@@ -31,7 +31,7 @@
 					<?php endif; ?>
 
 					<?php if ( !empty( $post->post_content ) ) : ?>			
-					<div class="image-description"<?php the_content(); ?></div>
+					<div class="image-description"><?php the_content(); ?></div>
 					<?php endif; ?>
 
 					<div style="clear:both;"></div>

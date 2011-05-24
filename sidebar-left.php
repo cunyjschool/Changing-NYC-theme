@@ -1,5 +1,11 @@
 <div class="sidebar-taxonomy sidebar float-left">
 	
+	<?php if ( is_single() ): ?>
+		<a href="<?php bloginfo('url'); ?>"><img class="site-logo float-right" src="<?php bloginfo('template_directory'); ?>/img/censuslogo2_75.png" width="130px" height="75px" /></a>
+	<?php endif; ?>
+	
+	<div class="clear-right"></div>
+	
 	<?php
 	$all_taxonomies = array(
 		'cngnyc_places',
