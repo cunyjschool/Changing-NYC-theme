@@ -1,6 +1,5 @@
 <?php
-
-define( 'CNGNYC_VERSION', '1.0g' );
+define( 'CNGNYC_VERSION', '1.0' );
 
 include_once( 'php/class.cngnyc_event.php' );
 
