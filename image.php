@@ -23,7 +23,7 @@
 					</div>
 					<h2><?php the_title(); ?></h2>
 
-					<div class="primary-image"><?php echo wp_get_attachment_image( $post->ID, array( 870, 870 ) ); ?></div>
+					<div class="primary-image align-center"><?php echo wp_get_attachment_image( $post->ID, array( 870, 600 ) ); ?></div>
 					<?php echo edit_post_link( 'Edit this image', '<p>', '</p>' ); ?>
 
 					<?php if ( !empty( $post->post_excerpt ) ) : ?>
