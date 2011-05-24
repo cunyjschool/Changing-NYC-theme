@@ -51,6 +51,10 @@ body {
 	float:right;
 }
 
+.align-center {
+	text-align: center;
+}
+
 .clear-both {
 	display:block;
 	clear:both;
@@ -400,6 +404,10 @@ ul li {
 
 body.single .main .content {
 	width: 600px;
+}
+
+body.single-attachment .main .content {
+	width: auto;
 }
 
 body.single .main .post,
