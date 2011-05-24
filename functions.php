@@ -1,6 +1,5 @@
 <?php
-
-define( 'CNGNYC_VERSION', '1.0g' );
+define( 'CNGNYC_VERSION', '1.0' );
 
 include_once( 'php/class.cngnyc_event.php' );
 
@@ -382,7 +381,7 @@ class cngnyc {
 		$post_formats = array(
 			'audio',
 			'gallery',
-			'image',
+			'video',
 		);
 		add_theme_support( 'post-formats', $post_formats );
 		add_post_type_support( 'post', 'post-formats' );
