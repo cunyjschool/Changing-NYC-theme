@@ -14,10 +14,10 @@
 
 					<div class="navigation-links">
 						<div class="left-navigation navigation-link float-left">
-						<?php previous_image_link( false, '&larr; Previous' ); ?>
+						<?php previous_image_link( false, '&larr; Previous image' ); ?>
 						</div>
 						<div class="right-navigation navigation-linkf float-right">
-							<?php next_image_link( false, 'Next &rarr;' ); ?>
+							<?php next_image_link( false, 'Next image &rarr;' ); ?>
 						</div>
 						<div class="align-center"><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></div>
 					</div>
