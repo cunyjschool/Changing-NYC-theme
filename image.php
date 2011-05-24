@@ -10,17 +10,20 @@
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div class="image post" id="image-<?php the_ID(); ?>">
+			<?php $image_id = get_the_id(); ?>
+			
+				<div class="image post" id="image-<?php echo $image_id; ?>">
 
 					<div class="navigation-links">
 						<div class="left-navigation navigation-link float-left">
-						<?php previous_image_link( false, '&larr; Previous' ); ?>
+						<?php previous_image_link( false, '&larr; Previous image' ); ?>
 						</div>
 						<div class="right-navigation navigation-linkf float-right">
-							<?php next_image_link( false, 'Next &rarr;' ); ?>
+							<?php next_image_link( false, 'Next image &rarr;' ); ?>
 						</div>
 						<div class="align-center"><a href="<?php echo get_permalink($post->post_parent); ?>"><?php echo get_the_title($post->post_parent); ?></a></div>
 					</div>
+					
 					<h2><?php the_title(); ?></h2>
 
 					<div class="primary-image align-center"><?php echo wp_get_attachment_image( $post->ID, array( 870, 600 ) ); ?></div>
@@ -38,13 +41,34 @@
 
 				</div><!-- END - .image -->
 
-			<?php // comments_template(); ?>
-
 			<?php endwhile; else: ?>
 
 				<div class="message info">Sorry, no attachments matched your criteria.</div>
 
 			<?php endif; ?>
+			
+			<div class="gallery-images">
+			
+			<?php
+				$args = array(
+					'post_type' => 'attachment',
+					'post_parent' => $post->post_parent,
+					'posts_per_page' => -1,
+					'post_status' => 'inherit',
+				);
+				$gallery_images = new WP_Query( $args );
+			?>
+			<?php if ( $gallery_images->have_posts() && $gallery_images->post_count > 1 ): ?>
+			
+			<?php while ( $gallery_images->have_posts() ) : $gallery_images->the_post(); ?>
+			
+			<div class="gallery-thumbnail float-left<?php if ( get_the_id() == $image_id ) { echo ' active'; } ?>">
+				<a href="<?php echo get_permalink( get_the_id() ); ?>"><?php echo wp_get_attachment_image( get_the_id(), array( 75, 75 ) ); ?></a>
+			</div>
+				
+			<?php endwhile; endif; ?>
+			
+			</div><!-- END .gallery-images -->
 	
 		<div class="clear-both"></div>
 		
