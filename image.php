@@ -55,6 +55,8 @@
 					'post_parent' => $post->post_parent,
 					'posts_per_page' => -1,
 					'post_status' => 'inherit',
+					'order' => 'ASC',
+					'orderby' => 'menu_order ID'
 				);
 				$gallery_images = new WP_Query( $args );
 			?>
